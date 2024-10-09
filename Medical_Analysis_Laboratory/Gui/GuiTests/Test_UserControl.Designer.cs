@@ -30,6 +30,46 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test_UserControl));
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node0");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node3");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node5");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node6");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node9");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node10");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node8", new System.Windows.Forms.TreeNode[] {
+            treeNode8,
+            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node7", new System.Windows.Forms.TreeNode[] {
+            treeNode10});
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node0");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node3");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Node5");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14,
+            treeNode15,
+            treeNode16});
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Node6");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Node9");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Node10");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Node8", new System.Windows.Forms.TreeNode[] {
+            treeNode19,
+            treeNode20});
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Node7", new System.Windows.Forms.TreeNode[] {
+            treeNode21});
             System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Node0");
             System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Node2");
             System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Node3");
@@ -48,50 +88,10 @@
             treeNode31});
             System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Node7", new System.Windows.Forms.TreeNode[] {
             treeNode32});
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("Node0");
-            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("Node3");
-            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("Node5");
-            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
-            treeNode68,
-            treeNode69,
-            treeNode70,
-            treeNode71});
-            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("Node6");
-            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("Node9");
-            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("Node10");
-            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("Node8", new System.Windows.Forms.TreeNode[] {
-            treeNode74,
-            treeNode75});
-            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("Node7", new System.Windows.Forms.TreeNode[] {
-            treeNode76});
-            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("Node0");
-            System.Windows.Forms.TreeNode treeNode79 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode80 = new System.Windows.Forms.TreeNode("Node3");
-            System.Windows.Forms.TreeNode treeNode81 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode82 = new System.Windows.Forms.TreeNode("Node5");
-            System.Windows.Forms.TreeNode treeNode83 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
-            treeNode79,
-            treeNode80,
-            treeNode81,
-            treeNode82});
-            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("Node6");
-            System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("Node9");
-            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Node10");
-            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Node8", new System.Windows.Forms.TreeNode[] {
-            treeNode85,
-            treeNode86});
-            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("Node7", new System.Windows.Forms.TreeNode[] {
-            treeNode87});
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MessageShow = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTN_Update = new Guna.UI2.WinForms.Guna2Button();
@@ -99,6 +99,7 @@
             this.BTN_Add = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_Export = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BTN_Search = new Guna.UI2.WinForms.Guna2Button();
             this.TX_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -132,7 +133,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.BTN_Search = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -400,6 +400,39 @@
             this.panel2.Size = new System.Drawing.Size(1474, 73);
             this.panel2.TabIndex = 24;
             // 
+            // BTN_Search
+            // 
+            this.BTN_Search.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_Search.BorderColor = System.Drawing.Color.White;
+            this.BTN_Search.BorderRadius = 8;
+            this.BTN_Search.BorderThickness = 2;
+            this.BTN_Search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_Search.FillColor = System.Drawing.Color.White;
+            this.BTN_Search.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.BTN_Search.ForeColor = System.Drawing.Color.White;
+            this.BTN_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
+            this.BTN_Search.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
+            this.BTN_Search.HoverState.FillColor = System.Drawing.Color.White;
+            this.BTN_Search.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.BTN_Search.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_search_60px;
+            this.BTN_Search.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_Search.ImageSize = new System.Drawing.Size(45, 45);
+            this.BTN_Search.Location = new System.Drawing.Point(145, 9);
+            this.BTN_Search.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.BTN_Search.Name = "BTN_Search";
+            this.BTN_Search.ShadowDecoration.BorderRadius = 20;
+            this.BTN_Search.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.BTN_Search.ShadowDecoration.Depth = 100;
+            this.BTN_Search.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.BTN_Search.Size = new System.Drawing.Size(63, 54);
+            this.BTN_Search.TabIndex = 26;
+            this.BTN_Search.Tag = "";
+            this.BTN_Search.Click += new System.EventHandler(this.BTN_Search_Click);
+            // 
             // TX_Search
             // 
             this.TX_Search.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
@@ -523,33 +556,33 @@
             this.TR_CategoryTest.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
             this.TR_CategoryTest.Location = new System.Drawing.Point(2, 51);
             this.TR_CategoryTest.Name = "TR_CategoryTest";
-            treeNode23.Name = "Node0";
-            treeNode23.Text = "Node0";
-            treeNode24.Name = "Node2";
-            treeNode24.Text = "Node2";
-            treeNode25.Name = "Node3";
-            treeNode25.Text = "Node3";
-            treeNode26.Name = "Node4";
-            treeNode26.Text = "Node4";
-            treeNode27.Name = "Node5";
-            treeNode27.Text = "Node5";
-            treeNode28.Name = "Node1";
-            treeNode28.Text = "Node1";
-            treeNode29.Name = "Node6";
-            treeNode29.Text = "Node6";
-            treeNode30.Name = "Node9";
-            treeNode30.Text = "Node9";
-            treeNode31.Name = "Node10";
-            treeNode31.Text = "Node10";
-            treeNode32.Name = "Node8";
-            treeNode32.Text = "Node8";
-            treeNode33.Name = "Node7";
-            treeNode33.Text = "Node7";
+            treeNode1.Name = "Node0";
+            treeNode1.Text = "Node0";
+            treeNode2.Name = "Node2";
+            treeNode2.Text = "Node2";
+            treeNode3.Name = "Node3";
+            treeNode3.Text = "Node3";
+            treeNode4.Name = "Node4";
+            treeNode4.Text = "Node4";
+            treeNode5.Name = "Node5";
+            treeNode5.Text = "Node5";
+            treeNode6.Name = "Node1";
+            treeNode6.Text = "Node1";
+            treeNode7.Name = "Node6";
+            treeNode7.Text = "Node6";
+            treeNode8.Name = "Node9";
+            treeNode8.Text = "Node9";
+            treeNode9.Name = "Node10";
+            treeNode9.Text = "Node10";
+            treeNode10.Name = "Node8";
+            treeNode10.Text = "Node8";
+            treeNode11.Name = "Node7";
+            treeNode11.Text = "Node7";
             this.TR_CategoryTest.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode23,
-            treeNode28,
-            treeNode29,
-            treeNode33});
+            treeNode1,
+            treeNode6,
+            treeNode7,
+            treeNode11});
             this.TR_CategoryTest.RightToLeftLayout = true;
             this.TR_CategoryTest.Size = new System.Drawing.Size(476, 161);
             this.TR_CategoryTest.TabIndex = 0;
@@ -629,44 +662,44 @@
             this.dataGridViewTotalValue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTotalValue.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewTotalValue.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTotalValue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTotalValue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTotalValue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTotalValue.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTotalValue.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTotalValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTotalValue.GridColor = System.Drawing.Color.White;
             this.dataGridViewTotalValue.Location = new System.Drawing.Point(2, 51);
             this.dataGridViewTotalValue.Name = "dataGridViewTotalValue";
             this.dataGridViewTotalValue.ReadOnly = true;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTotalValue.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTotalValue.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTotalValue.RowHeadersWidth = 20;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridViewTotalValue.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridViewTotalValue.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTotalValue.RowTemplate.Height = 26;
             this.dataGridViewTotalValue.RowTemplate.ReadOnly = true;
             this.dataGridViewTotalValue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -688,33 +721,33 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode67.Name = "Node0";
-            treeNode67.Text = "Node0";
-            treeNode68.Name = "Node2";
-            treeNode68.Text = "Node2";
-            treeNode69.Name = "Node3";
-            treeNode69.Text = "Node3";
-            treeNode70.Name = "Node4";
-            treeNode70.Text = "Node4";
-            treeNode71.Name = "Node5";
-            treeNode71.Text = "Node5";
-            treeNode72.Name = "Node1";
-            treeNode72.Text = "Node1";
-            treeNode73.Name = "Node6";
-            treeNode73.Text = "Node6";
-            treeNode74.Name = "Node9";
-            treeNode74.Text = "Node9";
-            treeNode75.Name = "Node10";
-            treeNode75.Text = "Node10";
-            treeNode76.Name = "Node8";
-            treeNode76.Text = "Node8";
-            treeNode77.Name = "Node7";
-            treeNode77.Text = "Node7";
+            treeNode12.Name = "Node0";
+            treeNode12.Text = "Node0";
+            treeNode13.Name = "Node2";
+            treeNode13.Text = "Node2";
+            treeNode14.Name = "Node3";
+            treeNode14.Text = "Node3";
+            treeNode15.Name = "Node4";
+            treeNode15.Text = "Node4";
+            treeNode16.Name = "Node5";
+            treeNode16.Text = "Node5";
+            treeNode17.Name = "Node1";
+            treeNode17.Text = "Node1";
+            treeNode18.Name = "Node6";
+            treeNode18.Text = "Node6";
+            treeNode19.Name = "Node9";
+            treeNode19.Text = "Node9";
+            treeNode20.Name = "Node10";
+            treeNode20.Text = "Node10";
+            treeNode21.Name = "Node8";
+            treeNode21.Text = "Node8";
+            treeNode22.Name = "Node7";
+            treeNode22.Text = "Node7";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode67,
-            treeNode72,
-            treeNode73,
-            treeNode77});
+            treeNode12,
+            treeNode17,
+            treeNode18,
+            treeNode22});
             this.treeView1.Size = new System.Drawing.Size(421, 478);
             this.treeView1.TabIndex = 0;
             // 
@@ -808,33 +841,33 @@
             this.TR_Tests.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
             this.TR_Tests.Location = new System.Drawing.Point(2, 51);
             this.TR_Tests.Name = "TR_Tests";
-            treeNode78.Name = "Node0";
-            treeNode78.Text = "Node0";
-            treeNode79.Name = "Node2";
-            treeNode79.Text = "Node2";
-            treeNode80.Name = "Node3";
-            treeNode80.Text = "Node3";
-            treeNode81.Name = "Node4";
-            treeNode81.Text = "Node4";
-            treeNode82.Name = "Node5";
-            treeNode82.Text = "Node5";
-            treeNode83.Name = "Node1";
-            treeNode83.Text = "Node1";
-            treeNode84.Name = "Node6";
-            treeNode84.Text = "Node6";
-            treeNode85.Name = "Node9";
-            treeNode85.Text = "Node9";
-            treeNode86.Name = "Node10";
-            treeNode86.Text = "Node10";
-            treeNode87.Name = "Node8";
-            treeNode87.Text = "Node8";
-            treeNode88.Name = "Node7";
-            treeNode88.Text = "Node7";
+            treeNode23.Name = "Node0";
+            treeNode23.Text = "Node0";
+            treeNode24.Name = "Node2";
+            treeNode24.Text = "Node2";
+            treeNode25.Name = "Node3";
+            treeNode25.Text = "Node3";
+            treeNode26.Name = "Node4";
+            treeNode26.Text = "Node4";
+            treeNode27.Name = "Node5";
+            treeNode27.Text = "Node5";
+            treeNode28.Name = "Node1";
+            treeNode28.Text = "Node1";
+            treeNode29.Name = "Node6";
+            treeNode29.Text = "Node6";
+            treeNode30.Name = "Node9";
+            treeNode30.Text = "Node9";
+            treeNode31.Name = "Node10";
+            treeNode31.Text = "Node10";
+            treeNode32.Name = "Node8";
+            treeNode32.Text = "Node8";
+            treeNode33.Name = "Node7";
+            treeNode33.Text = "Node7";
             this.TR_Tests.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode78,
-            treeNode83,
-            treeNode84,
-            treeNode88});
+            treeNode23,
+            treeNode28,
+            treeNode29,
+            treeNode33});
             this.TR_Tests.RightToLeftLayout = true;
             this.TR_Tests.Size = new System.Drawing.Size(990, 217);
             this.TR_Tests.TabIndex = 0;
@@ -866,7 +899,8 @@
             this.CMS_TRTests.RenderStyle.SeparatorColor = System.Drawing.Color.White;
             this.CMS_TRTests.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.CMS_TRTests.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CMS_TRTests.Size = new System.Drawing.Size(152, 136);
+            this.CMS_TRTests.Size = new System.Drawing.Size(228, 164);
+            this.CMS_TRTests.Opening += new System.ComponentModel.CancelEventHandler(this.CMS_TRTests_Opening);
             // 
             // TSM_addData
             // 
@@ -876,7 +910,7 @@
             this.TSM_addData.Name = "TSM_addData";
             this.TSM_addData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TSM_addData.RightToLeftAutoMirrorImage = true;
-            this.TSM_addData.Size = new System.Drawing.Size(151, 40);
+            this.TSM_addData.Size = new System.Drawing.Size(227, 40);
             this.TSM_addData.Text = "إضافة";
             this.TSM_addData.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.TSM_addData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -885,7 +919,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(148, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(224, 6);
             // 
             // TSM_updateData
             // 
@@ -895,7 +929,7 @@
             this.TSM_updateData.Name = "TSM_updateData";
             this.TSM_updateData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TSM_updateData.RightToLeftAutoMirrorImage = true;
-            this.TSM_updateData.Size = new System.Drawing.Size(151, 40);
+            this.TSM_updateData.Size = new System.Drawing.Size(227, 40);
             this.TSM_updateData.Text = "تعديل";
             this.TSM_updateData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.TSM_updateData.Click += new System.EventHandler(this.TSM_updateData_Click);
@@ -903,7 +937,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(148, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(224, 6);
             // 
             // TSM_deleteData
             // 
@@ -913,7 +947,7 @@
             this.TSM_deleteData.Name = "TSM_deleteData";
             this.TSM_deleteData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TSM_deleteData.RightToLeftAutoMirrorImage = true;
-            this.TSM_deleteData.Size = new System.Drawing.Size(151, 40);
+            this.TSM_deleteData.Size = new System.Drawing.Size(227, 40);
             this.TSM_deleteData.Text = "حذف";
             this.TSM_deleteData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.TSM_deleteData.Click += new System.EventHandler(this.TSM_deleteData_Click);
@@ -984,38 +1018,38 @@
             this.dataGridViewCurrentNodeInfo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewCurrentNodeInfo.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewCurrentNodeInfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCurrentNodeInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCurrentNodeInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewCurrentNodeInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCurrentNodeInfo.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCurrentNodeInfo.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewCurrentNodeInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewCurrentNodeInfo.Location = new System.Drawing.Point(2, 51);
             this.dataGridViewCurrentNodeInfo.Name = "dataGridViewCurrentNodeInfo";
             this.dataGridViewCurrentNodeInfo.ReadOnly = true;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCurrentNodeInfo.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCurrentNodeInfo.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewCurrentNodeInfo.RowHeadersWidth = 20;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewCurrentNodeInfo.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewCurrentNodeInfo.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewCurrentNodeInfo.RowTemplate.Height = 26;
             this.dataGridViewCurrentNodeInfo.RowTemplate.ReadOnly = true;
             this.dataGridViewCurrentNodeInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1054,39 +1088,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(994, 478);
             this.panel3.TabIndex = 26;
-            // 
-            // BTN_Search
-            // 
-            this.BTN_Search.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_Search.BorderColor = System.Drawing.Color.White;
-            this.BTN_Search.BorderRadius = 8;
-            this.BTN_Search.BorderThickness = 2;
-            this.BTN_Search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_Search.FillColor = System.Drawing.Color.White;
-            this.BTN_Search.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.BTN_Search.ForeColor = System.Drawing.Color.White;
-            this.BTN_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
-            this.BTN_Search.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
-            this.BTN_Search.HoverState.FillColor = System.Drawing.Color.White;
-            this.BTN_Search.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
-            this.BTN_Search.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_search_60px;
-            this.BTN_Search.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BTN_Search.ImageSize = new System.Drawing.Size(45, 45);
-            this.BTN_Search.Location = new System.Drawing.Point(145, 9);
-            this.BTN_Search.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.BTN_Search.Name = "BTN_Search";
-            this.BTN_Search.ShadowDecoration.BorderRadius = 20;
-            this.BTN_Search.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.BTN_Search.ShadowDecoration.Depth = 100;
-            this.BTN_Search.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.BTN_Search.Size = new System.Drawing.Size(63, 54);
-            this.BTN_Search.TabIndex = 26;
-            this.BTN_Search.Tag = "";
-            this.BTN_Search.Click += new System.EventHandler(this.BTN_Search_Click);
             // 
             // Test_UserControl
             // 

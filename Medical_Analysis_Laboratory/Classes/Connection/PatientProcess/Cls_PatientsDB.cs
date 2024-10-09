@@ -50,12 +50,12 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.PatientProcess
             return dataTable;
         }
         //==> 3 Insert To Patients 
-        public void insertPatients(int idUser, string name, string age, string gender, string address, string phone, string isReferral, string note, DateTime dateAdd)
+        public void insertPatients(int idUser, string name, string age, string gender, string address, string phone, string note, DateTime dateAdd)
         {
             try
             {
                 connection.open();
-                SqlParameter[] param = new SqlParameter[9];
+                SqlParameter[] param = new SqlParameter[8];
                 param[0] = new SqlParameter("@idUser", SqlDbType.Int);
                 param[0].Value = idUser;
                 param[1] = new SqlParameter("@name", SqlDbType.NVarChar, 50);
@@ -68,12 +68,10 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.PatientProcess
                 param[4].Value = address;
                 param[5] = new SqlParameter("@phone", SqlDbType.NVarChar, 30);
                 param[5].Value = phone;
-                param[6] = new SqlParameter("@isReferral", SqlDbType.NVarChar, 3);
-                param[6].Value = isReferral;
-                param[7] = new SqlParameter("@note", SqlDbType.NVarChar, 200);
-                param[7].Value = note;
-                param[8] = new SqlParameter("@dateAdd", SqlDbType.Date);
-                param[8].Value = dateAdd;
+                param[6] = new SqlParameter("@note", SqlDbType.NVarChar, 200);
+                param[6].Value = note;
+                param[7] = new SqlParameter("@dateAdd", SqlDbType.Date);
+                param[7].Value = dateAdd;
 
                 connection.process("insertPatients", param);
                 connection.cloes();
@@ -84,12 +82,12 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.PatientProcess
             }
         }
         //==> 4 Update To Patient
-        public void updatePatient(int id, string name, string age, string gender, string address, string phone, string isReferral, string note)
+        public void updatePatient(int id, string name, string age, string gender, string address, string phone, string note)
         {
             try
             {
                 connection.open();
-                SqlParameter[] param = new SqlParameter[8];
+                SqlParameter[] param = new SqlParameter[7];
                 param[0] = new SqlParameter("@id", SqlDbType.Int);
                 param[0].Value = id;
                 param[1] = new SqlParameter("@name", SqlDbType.NVarChar, 50);
@@ -102,10 +100,8 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.PatientProcess
                 param[4].Value = address;
                 param[5] = new SqlParameter("@phone", SqlDbType.NVarChar, 30);
                 param[5].Value = phone;
-                param[6] = new SqlParameter("@isReferral", SqlDbType.NVarChar, 3);
-                param[6].Value = isReferral;
-                param[7] = new SqlParameter("@note", SqlDbType.NVarChar, 200);
-                param[7].Value = note;
+                param[6] = new SqlParameter("@note", SqlDbType.NVarChar, 200);
+                param[6].Value = note;
                 connection.process("updatePatients", param);
                 connection.cloes();
             }
@@ -132,14 +128,14 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.PatientProcess
             }
 
         }
-        //==> 6 getData To Patients To FollowUp
-        public DataTable getDataPatientsToFollowUp()
+        //==> 6 getData To Patients To Visits
+        public DataTable getDataPatientsToVisits()
         {
             DataTable dataPatients = new DataTable();
             try
             {
                 connection.open();
-                dataPatients = connection.Read_Data("getDataPatientsToFollowUp", null);
+                dataPatients = connection.Read_Data("getDataPatientsToVisits", null);
                 connection.cloes();
                 return dataPatients;
             }

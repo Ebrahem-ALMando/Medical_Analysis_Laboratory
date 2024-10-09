@@ -15,7 +15,6 @@ namespace Medical_Analysis_Laboratory.Forms.FormsPatient
         private bool isClose;
         private Form formMain;
         Cls_PatientsDB action = new Cls_PatientsDB();
-        private string isReferral="لا";
         #endregion
         public Form_AddPatients(Form formMain)
         {
@@ -24,10 +23,10 @@ namespace Medical_Analysis_Laboratory.Forms.FormsPatient
 
         }
         public Form_AddPatients(Form formMain, int id ,string name, string age,string gender,
-            string address,string phone, string isReferral, string note)
+            string address,string phone, string note)
         {
             InitializeComponent();
-            loadData(formMain, id, name, age, gender, address, phone, isReferral, note);
+            loadData(formMain, id, name, age, gender, address, phone, note);
         }
         #region Method
 
@@ -35,7 +34,7 @@ namespace Medical_Analysis_Laboratory.Forms.FormsPatient
         {
             this.formMain = formMain;
             TX_NamePatient.Select();
-            RB_No.Checked = true;
+
             this.Text = "اضافة مريض";
         }
         private void showSuccessAddMessageData()
@@ -50,7 +49,7 @@ namespace Medical_Analysis_Laboratory.Forms.FormsPatient
 
         }
         private void loadData(Form formMain, int id, string name, string age, string gender,
-            string address, string phone, string isReferral, string note)
+            string address, string phone, string note)
         {
             this.id = id;
             TX_NamePatient.Text = name;
@@ -58,8 +57,6 @@ namespace Medical_Analysis_Laboratory.Forms.FormsPatient
             COMP_GenderPatient.Text = gender;
             TX_Address.Text = address;
             TX_Phone.Text = phone;
-            RB_Yes.Checked = isReferral == "نعم";
-            RB_No.Checked= isReferral == "لا";
             RIT_NotePatient.Text = note;
             this.Text = "تعديل مريض";
             this.formMain = formMain;
@@ -80,14 +77,13 @@ namespace Medical_Analysis_Laboratory.Forms.FormsPatient
             COMP_GenderPatient.SelectedIndex = -1;
             TX_Phone.Clear();
             RIT_NotePatient.Clear();
-            RB_No.Checked = true;
         }
         private void addData()
         {
             try
             {
                 if (TX_NamePatient.Text == "" || TX_AgePatient.Text == "" || TX_Address.Text == ""|| COMP_GenderPatient.SelectedIndex==-1||
-                    TX_Phone.Text==""||(!RB_Yes.Checked&&!RB_No.Checked))
+                    TX_Phone.Text=="")
                 {
 
                     ClsMessageCollections.showEmptyMessageData();
@@ -97,7 +93,7 @@ namespace Medical_Analysis_Laboratory.Forms.FormsPatient
                     if (ClsMessageCollections.showQuitionAddMessageData() == DialogResult.OK)
                     {
                         action.insertPatients(Cls_UsersDB.idUser,TX_NamePatient.Text, TX_AgePatient.Text, COMP_GenderPatient.Text,
-                                TX_Address.Text,TX_Phone.Text,isReferral,RIT_NotePatient.Text, DateTime.Now);
+                                TX_Address.Text,TX_Phone.Text,RIT_NotePatient.Text, DateTime.Now);
                         showSuccessAddMessageData();
                         clearField();
                         if (isClose)
@@ -117,7 +113,7 @@ namespace Medical_Analysis_Laboratory.Forms.FormsPatient
             try
             {
                 if (TX_NamePatient.Text == "" || TX_AgePatient.Text == "" || TX_Address.Text == "" || COMP_GenderPatient.SelectedIndex == -1 ||
-                     TX_Phone.Text == "" || (!RB_Yes.Checked && !RB_No.Checked))
+                     TX_Phone.Text == "" )
                 {
                     ClsMessageCollections.showEmptyMessageData();
                 }
@@ -126,7 +122,7 @@ namespace Medical_Analysis_Laboratory.Forms.FormsPatient
                     if (ClsMessageCollections.showQuitionUpdateMessageData() == DialogResult.OK)
                     {
                         action.updatePatient(id, TX_NamePatient.Text, TX_AgePatient.Text, COMP_GenderPatient.Text,
-                                TX_Address.Text, TX_Phone.Text, isReferral, RIT_NotePatient.Text);
+                                TX_Address.Text, TX_Phone.Text, RIT_NotePatient.Text);
 
                         showSuccessUpdateMessageData();
                         if (isClose)
@@ -189,15 +185,6 @@ namespace Medical_Analysis_Laboratory.Forms.FormsPatient
         private void TX_Phone_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
-        }
-        private void RB_Yes_CheckedChanged(object sender, EventArgs e)
-        {
-            isReferral = "نعم";
-
-        }
-        private void RB_No_CheckedChanged(object sender, EventArgs e)
-        {
-            isReferral = "لا";
         }
         private void BTN_Add_Click_1(object sender, EventArgs e)
         {

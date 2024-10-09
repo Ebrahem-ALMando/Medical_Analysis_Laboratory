@@ -54,14 +54,14 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.UsersProcess
             }
 
         }
-        //==> 3 getData To Users Treatment Supervisors
-        public DataTable getDataUsersTreatmentSupervisors()
+        //==> 3 getData To Users Laboratory
+        public DataTable getDataUsersLaboratory()
         {
             DataTable dataUsers = new DataTable();
             try
             {
                 connection.open();
-                dataUsers = connection.Read_Data("getDataUsersTreatmentSupervisors", null);
+                dataUsers = connection.Read_Data("getDataUsersLaboratory", null);
                 connection.cloes();
                 return dataUsers;
             }

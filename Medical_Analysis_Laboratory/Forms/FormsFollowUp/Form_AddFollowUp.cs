@@ -46,7 +46,7 @@ namespace Medical_Analysis_Laboratory.Forms.FormsFollowUp
            DTP_NextData.MinDate = DateTime.Now;
         public void loadNamePatient()
         {
-            COMP_NamePatient.DataSource = PatientDB.getDataPatientsToFollowUp();
+         /*   COMP_NamePatient.DataSource = PatientDB.getDataPatientsToFollowUp();*/
             COMP_NamePatient.DisplayMember= "الاسم";
             COMP_NamePatient.ValueMember = "المعرف";
             COMP_NamePatient.SelectedIndex = -1;

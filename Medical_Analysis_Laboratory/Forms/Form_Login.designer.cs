@@ -29,11 +29,11 @@ namespace Medical_Analysis_Laboratory
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             this.Wellcome = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2CustomCheckBox1 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.BTN_Login = new Guna.UI2.WinForms.Guna2Button();
@@ -42,7 +42,6 @@ namespace Medical_Analysis_Laboratory
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TX_Password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -114,9 +113,23 @@ namespace Medical_Analysis_Laboratory
             this.guna2Panel1.Size = new System.Drawing.Size(539, 571);
             this.guna2Panel1.TabIndex = 9;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Cairo", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "مسؤول",
+            "مدخل",
+            "مخبري"});
+            this.comboBox1.Location = new System.Drawing.Point(61, 452);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 42);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::Medical_Analysis_Laboratory.Properties.Resources.Medical_Analysis_LaboratoryLogo;
             this.pictureBox1.Location = new System.Drawing.Point(46, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(447, 253);
@@ -271,17 +284,6 @@ namespace Medical_Analysis_Laboratory
             this.TX_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TX_Password_KeyDown);
             this.TX_Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TX_Password_KeyPress);
             this.TX_Password.Leave += new System.EventHandler(this.TX_Password_Leave);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "مسؤول"});
-            this.comboBox1.Location = new System.Drawing.Point(210, 300);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form_Login
             // 

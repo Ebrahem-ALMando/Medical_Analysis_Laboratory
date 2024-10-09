@@ -1,6 +1,7 @@
 ﻿using Bunifu.UI.WinForms;
 using Medical_Analysis_Laboratory.Classes;
 using Medical_Analysis_Laboratory.Classes.Connection.TestProcess;
+using Medical_Analysis_Laboratory.Classes.Connection.UsersProcess;
 using Medical_Analysis_Laboratory.Forms.FormsFollowUp;
 using Medical_Analysis_Laboratory.Forms.FormsPatient;
 using Medical_Analysis_Laboratory.Forms.FormsTests;
@@ -46,10 +47,30 @@ namespace Medical_Analysis_Laboratory.Gui.GuiTest
         private void loadInitConfig(Form form)
         {
             this.formMain = form;
+            userVerification();
+
+
+        }
+
+
+
+        private void userVerification()
+        {
+            if (Cls_UsersDB.typeUser.Trim() == "مسؤول")
+            {
+                BTN_Add.Visible = false;
+                BTN_Update.Visible = false;
+                BTN_Delete.Visible = false;
+                BTN_Add.Enabled = false;
+                BTN_Update.Enabled = false;
+                BTN_Delete.Enabled = false;
+                BTN_Export.Width = 600;
+                BTN_Export.Location = new Point(460, 11);
+                BTN_Export.TextAlign = HorizontalAlignment.Center;
+            }
             getData();
             loadDataToDGV();
         }
-   
         private void getData()
         {
             try
@@ -175,11 +196,11 @@ namespace Medical_Analysis_Laboratory.Gui.GuiTest
 
         private void searchTreeView(TreeNodeCollection nodes, string searchText)
         {
-            bool isFound=false;
+          /*  bool isFound=false;*/
             foreach (TreeNode node in nodes)
             {
-                Console.WriteLine("==========-----Name");
-                Console.WriteLine("nodeTracker" + node.Text.ToString());
+/*                Console.WriteLine("==========-----Name");
+                Console.WriteLine("nodeTracker" + node.Text.ToString());*/
                 // تحقق مما إذا كان النص المطلوب موجودًا في اسم العقدة الحالية
                 if (node.Text.ToLower().Contains(searchText.ToLower()))
                 {
@@ -187,12 +208,11 @@ namespace Medical_Analysis_Laboratory.Gui.GuiTest
                     TR_Tests.SelectedNode = node;
                     TR_Tests.Focus();
                     node.EnsureVisible(); // التأكد من أن العقدة مرئية بعد التوسيع
-                    isFound=true;
+                   /* isFound=true;*/
                     nodeTracker = 0;
                     break; // إذا أردت إيقاف البحث عند أول نتيجة
-
                 }
-             
+
                 // إذا كانت العقدة الحالية تحتوي على عقد فرعية، قم بإجراء البحث بشكل تكراري
                 if (node.Nodes.Count > 0)
                 {
@@ -201,11 +221,11 @@ namespace Medical_Analysis_Laboratory.Gui.GuiTest
                 }
                 nodeTracker++;
             }
-
+/*
             Console.WriteLine("==========-----");
             Console.WriteLine("nodeTracker" + nodeTracker.ToString());
             Console.WriteLine("==========");
-            Console.WriteLine(total.ToString());
+            Console.WriteLine(total.ToString());*/
             /*!isFound &&*/
             if ( total == nodeTracker)
             {
@@ -532,10 +552,14 @@ namespace Medical_Analysis_Laboratory.Gui.GuiTest
 
         private void TR_Tests_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Delete)
+            if (BTN_Delete.Enabled)
             {
-                BTN_Delete.PerformClick();
+                if (e.KeyCode == Keys.Delete)
+                {
+                    BTN_Delete.PerformClick();
+                }
             }
+           
         }
 
         private void TSM_addData_Click(object sender, EventArgs e)
@@ -567,6 +591,14 @@ namespace Medical_Analysis_Laboratory.Gui.GuiTest
             if (e.KeyCode == Keys.Enter)
             {
                 BTN_Search.PerformClick();
+            }
+        }
+
+        private void CMS_TRTests_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (TR_Tests.SelectedNode == null|| !BTN_Delete.Enabled) 
+            {
+                e.Cancel = true; 
             }
         }
     }

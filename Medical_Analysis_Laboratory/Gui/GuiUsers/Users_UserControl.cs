@@ -51,7 +51,7 @@ namespace Medical_Analysis_Laboratory.Gui.GuiUsers
                 dataTable.Columns.Add(new DataColumn("Value", typeof(string)));
                 dataTable.Rows.Add(new object[] { "الكل", "all" });
                 dataTable.Rows.Add(new object[] { "المسؤولين", "مسؤول" });
-                dataTable.Rows.Add(new object[] { "مشرفي العلاج", "مشرف علاج" });
+                dataTable.Rows.Add(new object[] { "المخبريين", "مخبري" });
                 dataTable.Rows.Add(new object[] { "مدخلو البيانات", "مدخل بيانات" });
                 COMP_FilterData.DataSource = dataTable;
                 COMP_FilterData.DisplayMember = "Name";
@@ -70,9 +70,9 @@ namespace Medical_Analysis_Laboratory.Gui.GuiUsers
         {
             dataGridViewUsers.DataSource = action.getDataUsersAdmins();
         }
-        public void getDataUsersTreatmentSupervisors()
+        public void getDataUsersLaboratory()
         {
-            dataGridViewUsers.DataSource = action.getDataUsersTreatmentSupervisors();
+            dataGridViewUsers.DataSource = action.getDataUsersLaboratory();
         }
         public void getDataUsersDataEntryists()
         {
@@ -90,8 +90,8 @@ namespace Medical_Analysis_Laboratory.Gui.GuiUsers
                 userName = dataGridViewUsers.CurrentRow.Cells[5].Value.ToString();
                 password = dataGridViewUsers.CurrentRow.Cells[6].Value.ToString();
                 typeUser = dataGridViewUsers.CurrentRow.Cells[7].Value.ToString();
-                BTN_Delete.Enabled = (Convert.ToBoolean(action.getDataIsCanDeleteUser(id).Rows[0][0].ToString()));
-
+/*                BTN_Delete.Enabled = (Convert.ToBoolean(action.getDataIsCanDeleteUser(id).Rows[0][0].ToString()));
+*/
             }
         }
         private string getTypeSearch()
@@ -155,7 +155,7 @@ namespace Medical_Analysis_Laboratory.Gui.GuiUsers
             }
             else if (COMP_FilterData.SelectedIndex == 2)
             {
-                getDataUsersTreatmentSupervisors();  
+                getDataUsersLaboratory();  
             }
             else if (COMP_FilterData.SelectedIndex == 3)
             {

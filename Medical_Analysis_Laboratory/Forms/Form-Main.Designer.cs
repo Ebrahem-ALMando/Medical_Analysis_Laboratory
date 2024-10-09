@@ -36,8 +36,9 @@
             this.BTN_Home = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_Users = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_Patients = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_FollowUp = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_Tests = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_Visits = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_FollowUp = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_Logout = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PAN_Time = new Guna.UI2.WinForms.Guna2Panel();
@@ -59,8 +60,9 @@
             this.Pan_BTNS.Controls.Add(this.BTN_Home);
             this.Pan_BTNS.Controls.Add(this.BTN_Users);
             this.Pan_BTNS.Controls.Add(this.BTN_Patients);
-            this.Pan_BTNS.Controls.Add(this.BTN_FollowUp);
             this.Pan_BTNS.Controls.Add(this.BTN_Tests);
+            this.Pan_BTNS.Controls.Add(this.BTN_Visits);
+            this.Pan_BTNS.Controls.Add(this.BTN_FollowUp);
             this.Pan_BTNS.Controls.Add(this.BTN_Logout);
             this.Pan_BTNS.Controls.Add(this.panel2);
             this.Pan_BTNS.Dock = System.Windows.Forms.DockStyle.Right;
@@ -84,11 +86,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(53, 6);
+            this.label1.Location = new System.Drawing.Point(57, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 74);
+            this.label1.Size = new System.Drawing.Size(124, 74);
             this.label1.TabIndex = 1;
-            this.label1.Text = "ادارة الحـروق\r\n فـي المـحــرر";
+            this.label1.Text = "مخبر التحاليل\r\n الطبية";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PIBPanel
             // 
@@ -207,41 +210,6 @@
             this.BTN_Patients.Text = "المرضى";
             this.BTN_Patients.Click += new System.EventHandler(this.BTN_Patients_Click);
             // 
-            // BTN_FollowUp
-            // 
-            this.BTN_FollowUp.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_FollowUp.BorderColor = System.Drawing.Color.White;
-            this.BTN_FollowUp.BorderRadius = 20;
-            this.BTN_FollowUp.BorderThickness = 2;
-            this.BTN_FollowUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_FollowUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_FollowUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_FollowUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_FollowUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_FollowUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
-            this.BTN_FollowUp.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.BTN_FollowUp.ForeColor = System.Drawing.Color.White;
-            this.BTN_FollowUp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
-            this.BTN_FollowUp.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
-            this.BTN_FollowUp.HoverState.FillColor = System.Drawing.Color.White;
-            this.BTN_FollowUp.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
-            this.BTN_FollowUp.HoverState.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_schedule_60px;
-            this.BTN_FollowUp.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_schedule_40px;
-            this.BTN_FollowUp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.BTN_FollowUp.ImageSize = new System.Drawing.Size(40, 40);
-            this.BTN_FollowUp.Location = new System.Drawing.Point(5, 325);
-            this.BTN_FollowUp.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.BTN_FollowUp.Name = "BTN_FollowUp";
-            this.BTN_FollowUp.ShadowDecoration.BorderRadius = 20;
-            this.BTN_FollowUp.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.BTN_FollowUp.ShadowDecoration.Depth = 100;
-            this.BTN_FollowUp.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.BTN_FollowUp.Size = new System.Drawing.Size(259, 53);
-            this.BTN_FollowUp.TabIndex = 7;
-            this.BTN_FollowUp.Tag = "المتابعات";
-            this.BTN_FollowUp.Text = "المتابعات";
-            this.BTN_FollowUp.Click += new System.EventHandler(this.BTN_FollowUp_Click);
-            // 
             // BTN_Tests
             // 
             this.BTN_Tests.BackColor = System.Drawing.Color.Transparent;
@@ -264,7 +232,7 @@
             this.BTN_Tests.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_test_40px;
             this.BTN_Tests.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BTN_Tests.ImageSize = new System.Drawing.Size(40, 40);
-            this.BTN_Tests.Location = new System.Drawing.Point(5, 391);
+            this.BTN_Tests.Location = new System.Drawing.Point(5, 325);
             this.BTN_Tests.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.BTN_Tests.Name = "BTN_Tests";
             this.BTN_Tests.ShadowDecoration.BorderRadius = 20;
@@ -276,6 +244,76 @@
             this.BTN_Tests.Tag = "التحاليل";
             this.BTN_Tests.Text = "التحاليل";
             this.BTN_Tests.Click += new System.EventHandler(this.BTN_TestCases_Click);
+            // 
+            // BTN_Visits
+            // 
+            this.BTN_Visits.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_Visits.BorderColor = System.Drawing.Color.White;
+            this.BTN_Visits.BorderRadius = 20;
+            this.BTN_Visits.BorderThickness = 2;
+            this.BTN_Visits.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_Visits.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_Visits.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_Visits.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_Visits.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_Visits.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.BTN_Visits.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.BTN_Visits.ForeColor = System.Drawing.Color.White;
+            this.BTN_Visits.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
+            this.BTN_Visits.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
+            this.BTN_Visits.HoverState.FillColor = System.Drawing.Color.White;
+            this.BTN_Visits.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.BTN_Visits.HoverState.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_schedule_60px;
+            this.BTN_Visits.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_schedule_40px;
+            this.BTN_Visits.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BTN_Visits.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_Visits.Location = new System.Drawing.Point(5, 391);
+            this.BTN_Visits.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.BTN_Visits.Name = "BTN_Visits";
+            this.BTN_Visits.ShadowDecoration.BorderRadius = 20;
+            this.BTN_Visits.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.BTN_Visits.ShadowDecoration.Depth = 100;
+            this.BTN_Visits.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.BTN_Visits.Size = new System.Drawing.Size(259, 53);
+            this.BTN_Visits.TabIndex = 11;
+            this.BTN_Visits.Tag = "الزيارات";
+            this.BTN_Visits.Text = "الزيارات";
+            this.BTN_Visits.Click += new System.EventHandler(this.BTN_Visits_Click);
+            // 
+            // BTN_FollowUp
+            // 
+            this.BTN_FollowUp.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_FollowUp.BorderColor = System.Drawing.Color.White;
+            this.BTN_FollowUp.BorderRadius = 20;
+            this.BTN_FollowUp.BorderThickness = 2;
+            this.BTN_FollowUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_FollowUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_FollowUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_FollowUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_FollowUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_FollowUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.BTN_FollowUp.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.BTN_FollowUp.ForeColor = System.Drawing.Color.White;
+            this.BTN_FollowUp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
+            this.BTN_FollowUp.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(1)))), ((int)(((byte)(5)))));
+            this.BTN_FollowUp.HoverState.FillColor = System.Drawing.Color.White;
+            this.BTN_FollowUp.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.BTN_FollowUp.HoverState.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_schedule_60px;
+            this.BTN_FollowUp.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_schedule_40px;
+            this.BTN_FollowUp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BTN_FollowUp.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_FollowUp.Location = new System.Drawing.Point(5, 457);
+            this.BTN_FollowUp.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.BTN_FollowUp.Name = "BTN_FollowUp";
+            this.BTN_FollowUp.ShadowDecoration.BorderRadius = 20;
+            this.BTN_FollowUp.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.BTN_FollowUp.ShadowDecoration.Depth = 100;
+            this.BTN_FollowUp.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.BTN_FollowUp.Size = new System.Drawing.Size(259, 53);
+            this.BTN_FollowUp.TabIndex = 7;
+            this.BTN_FollowUp.Tag = "تحاليل المرضى";
+            this.BTN_FollowUp.Text = "تحاليل المرضى";
+            this.BTN_FollowUp.Click += new System.EventHandler(this.BTN_FollowUp_Click);
             // 
             // BTN_Logout
             // 
@@ -300,7 +338,7 @@
             this.BTN_Logout.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_logout_40px_1;
             this.BTN_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BTN_Logout.ImageSize = new System.Drawing.Size(40, 40);
-            this.BTN_Logout.Location = new System.Drawing.Point(5, 457);
+            this.BTN_Logout.Location = new System.Drawing.Point(5, 523);
             this.BTN_Logout.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.BTN_Logout.Name = "BTN_Logout";
             this.BTN_Logout.ShadowDecoration.BorderRadius = 20;
@@ -317,7 +355,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.Controls.Add(this.PAN_Time);
-            this.panel2.Location = new System.Drawing.Point(-8, 516);
+            this.panel2.Location = new System.Drawing.Point(-8, 582);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(272, 331);
             this.panel2.TabIndex = 10;
@@ -427,5 +465,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LBL_Date;
+        private Guna.UI2.WinForms.Guna2Button BTN_Visits;
     }
 }

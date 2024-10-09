@@ -278,6 +278,16 @@ namespace Medical_Analysis_Laboratory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap homepage {
+            get {
+                object obj = ResourceManager.GetObject("homepage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_a_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_a_50px", resourceCulture);
@@ -668,6 +678,16 @@ namespace Medical_Analysis_Laboratory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_medical_history_60px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_medical_history_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_nurse_call_60px {
             get {
                 object obj = ResourceManager.GetObject("icons8_nurse_call_60px", resourceCulture);
@@ -938,9 +958,49 @@ namespace Medical_Analysis_Laboratory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_view_schedule_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_view_schedule_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_view_schedule_50px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_view_schedule_50px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_xbox_menu_40px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_xbox_menu_40px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_xls_export_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_xls_export_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_xls_export_50px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_xls_export_50px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -961,6 +1021,16 @@ namespace Medical_Analysis_Laboratory.Properties {
         internal static System.Drawing.Bitmap logoLogin {
             get {
                 object obj = ResourceManager.GetObject("logoLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Medical_Analysis_LaboratoryLogo {
+            get {
+                object obj = ResourceManager.GetObject("Medical_Analysis_LaboratoryLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1111,11 +1181,12 @@ namespace Medical_Analysis_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to سيتم مسح الاجابات السابقة.
+        ///   Looks up a localized string similar to سيتم حذف التحاليل المتعلقة 
+        ///بهذة الزيارة.
         /// </summary>
-        internal static string WarningClrearAnswer {
+        internal static string WarningClrearVisitTests {
             get {
-                return ResourceManager.GetString("WarningClrearAnswer", resourceCulture);
+                return ResourceManager.GetString("WarningClrearVisitTests", resourceCulture);
             }
         }
         
@@ -1183,7 +1254,7 @@ namespace Medical_Analysis_Laboratory.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to يرجى ادخال قيمة اقل من 100.
+        ///   Looks up a localized string similar to يرجى ادخال قيمة اقل من 20.
         /// </summary>
         internal static string WarningInputValueInRange {
             get {

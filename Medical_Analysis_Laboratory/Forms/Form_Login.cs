@@ -238,8 +238,19 @@ namespace Medical_Analysis_Laboratory
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+          if(comboBox1.SelectedIndex == 0)
+            {
+                TX_UserName.Text = "ebrahem-m";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                TX_UserName.Text = "ahmad";
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                TX_UserName.Text = "mohmod";
+            }
             TX_Password.Text = "20012001";
-            TX_UserName.Text = "ebrahem-m";
         }
     }
 }

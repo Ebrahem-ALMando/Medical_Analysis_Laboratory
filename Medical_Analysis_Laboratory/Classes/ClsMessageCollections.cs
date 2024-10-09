@@ -218,10 +218,10 @@ namespace Medical_Analysis_Laboratory.Classes
             messageShow.Show(Resources.SuccessRestoreBackup + "\n ", Resources.CaptionSuccessActionData);
         }
 
-        public static DialogResult showWarningClrearAnswerMessageData()
+        public static DialogResult showWarningClrearVisitTestsMessageData()
         {
             getQuitionMessageFormat();
-            DialogResult check = messageShow.Show(Resources.WarningClrearAnswer + "\n ", Resources.CaptionWarningData);
+            DialogResult check = messageShow.Show(Resources.WarningClrearVisitTests + "\n ", Resources.CaptionWarningData);
             return check;
         }
         public static void showSuccessSubmiteExamMessageData()
@@ -231,7 +231,7 @@ namespace Medical_Analysis_Laboratory.Classes
         }
         //-------------------------------New
 
-        public static void showWarningInputvalueGreaterthan100MessageData()
+        public static void showWarningInputvalueGreaterthan20MessageData()
         {
             getWarningMessageFormat();
             messageShow.Show(Resources.WarningInputValueInRange + "\n ", Resources.CaptionWarningData);
@@ -277,19 +277,19 @@ namespace Medical_Analysis_Laboratory.Classes
             }
 
         }
-        public static void checkInputTextBoxNumber(TextBox textBox)
+      /*  public static void checkInputTextBoxNumber(TextBox textBox)
         {
             if (textBox.Text != "")
             {
                 float textValue = Convert.ToSingle(textBox.Text);
                 if (textValue > 100)
                 {
-                    showWarningInputvalueGreaterthan100MessageData();
+                   *//* showWarningInputvalueGreaterthan100MessageData();*//*
                     textBox.Clear();
                 }
             }
 
-        }
+        }*/
         public static void showEmptySelectedMessageData()
         {
             getWarningMessageFormat();

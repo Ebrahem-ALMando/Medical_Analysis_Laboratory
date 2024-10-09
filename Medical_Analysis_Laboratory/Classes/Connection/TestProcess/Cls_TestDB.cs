@@ -30,7 +30,7 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.TestProcess
             }
 
         }
-        //==> 3  Insert Test
+        //==> 2  Insert Test
         public void insertTest(int? idParent, int idUser, string name, bool isCategory, float? rangeBegin,
                               float? rangeEnd, string diagnosisValueLessThanBegin, string diagnosisValueBetweenRange,
                               string diagnosisValueBiggerThanEnd, string note)
@@ -82,7 +82,7 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.TestProcess
             }
         }
 
-        //==> 6 update To Test
+        //==> 3 update To Test
         public void updateTest(int id, string name, string note)
         {
             try
@@ -127,6 +127,46 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.TestProcess
                 Console.WriteLine(ex.Message);
             }
         }
-    
+        //==> 5 get Data Test To Visit
+        public DataTable getDataTestToVisit()
+        {
+            DataTable dataTest = new DataTable();
+            try
+            {
+                connection.open();
+                dataTest = connection.Read_Data("getDataTestToVisit", null);
+                connection.cloes();
+                return dataTest;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dataTest;
+            }
+
+        }
+
+        //==> 6 get Data Patient Test By Visit
+        public DataTable getDataPatientTestsByVisit(int id)
+        {
+            DataTable dataTest = new DataTable();
+            try
+            {
+                connection.open();
+                SqlParameter []param=new SqlParameter[1];
+                param[0]= new SqlParameter("@idVisit", SqlDbType.Int);
+                param[0].Value = id;
+                dataTest = connection.Read_Data("getDataPatientTestsByVisit", param);
+                connection.cloes();
+                return dataTest;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dataTest;
+            }
+
+        }
+
     }
 }

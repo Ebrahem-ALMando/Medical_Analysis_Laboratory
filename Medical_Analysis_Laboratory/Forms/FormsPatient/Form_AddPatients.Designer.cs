@@ -31,13 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AddPatients));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.RB_Yes = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.RB_No = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.TX_Phone = new System.Windows.Forms.TextBox();
             this.COMP_GenderPatient = new System.Windows.Forms.ComboBox();
             this.RIT_NotePatient = new System.Windows.Forms.RichTextBox();
@@ -64,13 +59,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.RB_Yes);
-            this.groupBox1.Controls.Add(this.RB_No);
             this.groupBox1.Controls.Add(this.TX_Phone);
             this.groupBox1.Controls.Add(this.COMP_GenderPatient);
             this.groupBox1.Controls.Add(this.RIT_NotePatient);
@@ -90,21 +80,11 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "معلومات الفرع الدراسـي";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cairo", 12F);
-            this.label9.Location = new System.Drawing.Point(459, 384);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 37);
-            this.label9.TabIndex = 56;
-            this.label9.Text = "هل يوجد إحالة";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cairo", 12F);
-            this.label8.Location = new System.Drawing.Point(458, 314);
+            this.label8.Location = new System.Drawing.Point(458, 347);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(132, 37);
             this.label8.TabIndex = 55;
@@ -120,64 +100,10 @@
             this.label7.TabIndex = 54;
             this.label7.Text = "ملاحـــظـــات";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cairo", 12F);
-            this.label6.Location = new System.Drawing.Point(238, 374);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 37);
-            this.label6.TabIndex = 53;
-            this.label6.Text = "نعم";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cairo", 12F);
-            this.label4.Location = new System.Drawing.Point(144, 374);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 37);
-            this.label4.TabIndex = 52;
-            this.label4.Text = "لا";
-            // 
-            // RB_Yes
-            // 
-            this.RB_Yes.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            this.RB_Yes.CheckedState.BorderThickness = 0;
-            this.RB_Yes.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
-            this.RB_Yes.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RB_Yes.Location = new System.Drawing.Point(212, 384);
-            this.RB_Yes.Name = "RB_Yes";
-            this.RB_Yes.Size = new System.Drawing.Size(20, 20);
-            this.RB_Yes.TabIndex = 51;
-            this.RB_Yes.Text = "guna2CustomRadioButton1";
-            this.RB_Yes.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
-            this.RB_Yes.UncheckedState.BorderThickness = 2;
-            this.RB_Yes.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.RB_Yes.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.RB_Yes.CheckedChanged += new System.EventHandler(this.RB_Yes_CheckedChanged);
-            // 
-            // RB_No
-            // 
-            this.RB_No.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            this.RB_No.CheckedState.BorderThickness = 0;
-            this.RB_No.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
-            this.RB_No.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RB_No.Location = new System.Drawing.Point(115, 384);
-            this.RB_No.Name = "RB_No";
-            this.RB_No.Size = new System.Drawing.Size(20, 20);
-            this.RB_No.TabIndex = 50;
-            this.RB_No.Text = "guna2CustomRadioButton1";
-            this.RB_No.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
-            this.RB_No.UncheckedState.BorderThickness = 2;
-            this.RB_No.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.RB_No.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.RB_No.CheckedChanged += new System.EventHandler(this.RB_No_CheckedChanged);
-            // 
             // TX_Phone
             // 
             this.TX_Phone.Font = new System.Drawing.Font("Cairo", 12F);
-            this.TX_Phone.Location = new System.Drawing.Point(35, 311);
+            this.TX_Phone.Location = new System.Drawing.Point(35, 344);
             this.TX_Phone.Name = "TX_Phone";
             this.TX_Phone.Size = new System.Drawing.Size(365, 45);
             this.TX_Phone.TabIndex = 5;
@@ -197,7 +123,7 @@
             this.COMP_GenderPatient.Items.AddRange(new object[] {
             "ذكر",
             "انثى"});
-            this.COMP_GenderPatient.Location = new System.Drawing.Point(35, 171);
+            this.COMP_GenderPatient.Location = new System.Drawing.Point(35, 194);
             this.COMP_GenderPatient.MaxDropDownItems = 5;
             this.COMP_GenderPatient.Name = "COMP_GenderPatient";
             this.COMP_GenderPatient.Size = new System.Drawing.Size(365, 50);
@@ -216,7 +142,7 @@
             // TX_AgePatient
             // 
             this.TX_AgePatient.Font = new System.Drawing.Font("Cairo", 12F);
-            this.TX_AgePatient.Location = new System.Drawing.Point(35, 103);
+            this.TX_AgePatient.Location = new System.Drawing.Point(35, 119);
             this.TX_AgePatient.Name = "TX_AgePatient";
             this.TX_AgePatient.Size = new System.Drawing.Size(365, 45);
             this.TX_AgePatient.TabIndex = 2;
@@ -228,7 +154,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cairo", 12F);
-            this.label5.Location = new System.Drawing.Point(454, 103);
+            this.label5.Location = new System.Drawing.Point(454, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 37);
             this.label5.TabIndex = 23;
@@ -238,7 +164,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cairo", 12F);
-            this.label2.Location = new System.Drawing.Point(458, 244);
+            this.label2.Location = new System.Drawing.Point(459, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 37);
             this.label2.TabIndex = 6;
@@ -247,7 +173,7 @@
             // TX_Address
             // 
             this.TX_Address.Font = new System.Drawing.Font("Cairo", 12F);
-            this.TX_Address.Location = new System.Drawing.Point(35, 244);
+            this.TX_Address.Location = new System.Drawing.Point(36, 272);
             this.TX_Address.Name = "TX_Address";
             this.TX_Address.Size = new System.Drawing.Size(365, 45);
             this.TX_Address.TabIndex = 4;
@@ -258,7 +184,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cairo", 12F);
-            this.label3.Location = new System.Drawing.Point(459, 171);
+            this.label3.Location = new System.Drawing.Point(459, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 37);
             this.label3.TabIndex = 4;
@@ -267,7 +193,7 @@
             // TX_NamePatient
             // 
             this.TX_NamePatient.Font = new System.Drawing.Font("Cairo", 12F);
-            this.TX_NamePatient.Location = new System.Drawing.Point(35, 42);
+            this.TX_NamePatient.Location = new System.Drawing.Point(35, 52);
             this.TX_NamePatient.Name = "TX_NamePatient";
             this.TX_NamePatient.Size = new System.Drawing.Size(365, 45);
             this.TX_NamePatient.TabIndex = 1;
@@ -278,7 +204,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cairo", 12F);
-            this.label1.Location = new System.Drawing.Point(452, 45);
+            this.label1.Location = new System.Drawing.Point(452, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 37);
             this.label1.TabIndex = 0;
@@ -537,12 +463,7 @@
         private System.Windows.Forms.ComboBox COMP_GenderPatient;
         private System.Windows.Forms.TextBox TX_Phone;
         private DevExpress.XtraBars.Ribbon.RadialMenu radialMenu1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton RB_Yes;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton RB_No;
     }
 }

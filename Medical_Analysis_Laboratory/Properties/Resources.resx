@@ -181,6 +181,9 @@
   <data name="HomeDes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HomeDes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homepage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_add_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_add_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -298,6 +301,9 @@
   <data name="icons8_maybe_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_maybe_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_medical_history_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_medical_history_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_nurse_call_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_nurse_call_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -379,14 +385,29 @@
   <data name="icons8_user_locked_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_user_locked_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_view_schedule_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_view_schedule_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_view_schedule_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_view_schedule_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_xbox_menu_40px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_xbox_menu_40px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_xls_export_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_xls_export_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_xls_export_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_xls_export_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loginBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4006.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logoLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blue Minimalist Health Logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Medical_Analysis_LaboratoryLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medical_Analysis_LaboratoryLogo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NotUpdateProductdefcult" xml:space="preserve">
     <value>يرجى تحديد السجل المطلوب</value>
@@ -436,8 +457,9 @@
   <data name="WarningBValBiggerThanEVal" xml:space="preserve">
     <value>قيم المجال غير صحيحة</value>
   </data>
-  <data name="WarningClrearAnswer" xml:space="preserve">
-    <value>سيتم مسح الاجابات السابقة</value>
+  <data name="WarningClrearVisitTests" xml:space="preserve">
+    <value>سيتم حذف التحاليل المتعلقة 
+بهذة الزيارة</value>
   </data>
   <data name="WarningDataIsEmpty" xml:space="preserve">
     <value>لا يوجد بيانات </value>
@@ -461,7 +483,7 @@
     <value>كلمة السر خاطئة</value>
   </data>
   <data name="WarningInputValueInRange" xml:space="preserve">
-    <value>يرجى ادخال قيمة اقل من 100</value>
+    <value>يرجى ادخال قيمة اقل من 20</value>
   </data>
   <data name="WarningisSubmittedExam" xml:space="preserve">
     <value>تم تقديم هذا الاختبار مسبقا</value>

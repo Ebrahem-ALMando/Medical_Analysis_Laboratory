@@ -297,7 +297,7 @@
             this.COMP_TypeUser.IntegralHeight = false;
             this.COMP_TypeUser.Items.AddRange(new object[] {
             "مسؤول",
-            "مشرف علاج",
+            "مخبري",
             "مدخل بيانات"});
             this.COMP_TypeUser.Location = new System.Drawing.Point(35, 196);
             this.COMP_TypeUser.MaxDropDownItems = 5;

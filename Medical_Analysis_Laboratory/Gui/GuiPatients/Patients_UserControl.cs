@@ -23,7 +23,6 @@ namespace Medical_Analysis_Laboratory.Gui.GuiHome
         private string gender;
         private string address;
         private string phone;
-        private string isReferral;
         private string note;
         private static Patients_UserControl PatientesUserControl;
         Form_AddPatients addPatientes;
@@ -66,8 +65,6 @@ namespace Medical_Analysis_Laboratory.Gui.GuiHome
                 BTN_Export.Location = new Point(460, 11);
                 BTN_Export.TextAlign = HorizontalAlignment.Center;
                 getData();
-
-
             }
             else
             {
@@ -137,10 +134,7 @@ namespace Medical_Analysis_Laboratory.Gui.GuiHome
                 gender = dataGridViewPatients.CurrentRow.Cells[3].Value.ToString();
                 address = dataGridViewPatients.CurrentRow.Cells[4].Value.ToString();
                 phone = dataGridViewPatients.CurrentRow.Cells[5].Value.ToString();
-                isReferral = dataGridViewPatients.CurrentRow.Cells[9].Value.ToString();
-                note = dataGridViewPatients.CurrentRow.Cells[11].Value.ToString();
-
-
+                note = dataGridViewPatients.CurrentRow.Cells[7].Value.ToString();
 
                 BTN_Delete.Enabled = Convert.ToBoolean(action.getDataIsCanDeletePatient(id).Rows[0][0].ToString() == "0");
 
@@ -154,7 +148,7 @@ namespace Medical_Analysis_Laboratory.Gui.GuiHome
             {
                 if (id != 0)
                 {
-                    addPatientes = new Form_AddPatients(formMain, id, name, age, gender, address, phone, isReferral,note);
+                    addPatientes = new Form_AddPatients(formMain, id, name, age, gender, address, phone,note);
                     addPatientes.ShowDialog();
                     userVerification();
                 }

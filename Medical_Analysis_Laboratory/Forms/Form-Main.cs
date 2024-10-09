@@ -9,6 +9,7 @@ using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using Medical_Analysis_Laboratory.Gui.GuiVisits;
 
 namespace Medical_Analysis_Laboratory
 {
@@ -34,7 +35,7 @@ namespace Medical_Analysis_Laboratory
         {
             if (Cls_UsersDB.isLogin)
             {
-                if ((Cls_UsersDB.typeUser).Trim() == "مشرف علاج")
+                if ((Cls_UsersDB.typeUser).Trim() == "مخبري")
                 {
                     BTN_Users.Visible = false;
                     BTN_Patients.Visible = false;
@@ -43,6 +44,7 @@ namespace Medical_Analysis_Laboratory
                 else if ((Cls_UsersDB.typeUser).Trim() == "مدخل بيانات")
                 {
                     BTN_Users.Visible = false;
+                    BTN_Visits.Visible = false;
                     BTN_FollowUp.Visible = false;
                     BTN_Tests.Visible = false;
                     panel2.Margin = new Padding(3, 200, 3, 3);
@@ -84,7 +86,7 @@ namespace Medical_Analysis_Laboratory
                     case "BTN_Patients":
                         oldImage = Properties.Resources.icons8_nurse_call_60px_1;
                         break;
-                    case "BTN_FollowUp":
+                    case "BTN_Visits":
                         oldImage = Properties.Resources.icons8_schedule_40px;
                         break;
                     case "BTN_Tests":
@@ -171,6 +173,12 @@ namespace Medical_Analysis_Laboratory
             var image = Properties.Resources.icons8_test_60px;
             changeColorBTN(sender, image);
         }
+        private void BTN_Visits_Click(object sender, EventArgs e)
+        {
+            pageManager.LoadPage(Visits_UserControl.Instance(this));
+            var image = Properties.Resources.icons8_schedule_60px;
+            changeColorBTN(sender, image);
+        }
         private void BTN_Logout_Click(object sender, EventArgs e)
         {
             islogout=true;
@@ -200,6 +208,6 @@ namespace Medical_Analysis_Laboratory
             }
         }
 
-       
+    
     }
 }
