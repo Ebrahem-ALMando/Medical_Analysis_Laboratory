@@ -1,5 +1,4 @@
 ﻿using Bunifu.UI.WinForms;
-using Medical_Analysis_Laboratory.Classes.Connection.PatientProcess;
 using Medical_Analysis_Laboratory.Properties;
 using System;
 using System.Windows.Forms;
@@ -8,7 +7,6 @@ using Medical_Analysis_Laboratory.Classes.Connection.UsersProcess;
 using Medical_Analysis_Laboratory.Classes.Connection.TestProcess;
 using System.Drawing;
 using System.Data;
-using DevExpress.ClipboardSource.SpreadsheetML;
 
 namespace Medical_Analysis_Laboratory.Forms.FormsTests
 {
@@ -17,12 +15,10 @@ namespace Medical_Analysis_Laboratory.Forms.FormsTests
         #region Var
         private int id=0;
         private bool isClose;
-        private int idCurrentNode = -1;
         private int idParentNode=-1;
         private TreeNode cuurentNode=null;
         private Form formMain;
         Cls_TestDB action = new Cls_TestDB();
-        private string isReferral="لا";
         #endregion
         public Form_AddTests(Form formMain, TreeNode cuurentNode)
         {
@@ -36,6 +32,8 @@ namespace Medical_Analysis_Laboratory.Forms.FormsTests
             loadData(formMain,filteredRows);
             dsiableGUIToolWithUpdate();
         }
+
+        #region Method
         private string getDataFilteredRows(DataRow[] filteredRows, string data)
         {
             if (!string.IsNullOrEmpty(data) && filteredRows.Length > 0 && !filteredRows[0].IsNull(data))
@@ -44,7 +42,6 @@ namespace Medical_Analysis_Laboratory.Forms.FormsTests
             }
             return "";
         }
-
         private void dsiableGUIToolWithUpdate()
         {
             COMP_isRoot.Enabled = false;
@@ -56,8 +53,6 @@ namespace Medical_Analysis_Laboratory.Forms.FormsTests
             RTB_diagnosisValueBetweenRange.ReadOnly = true;
             RTB_diagnosisValueBiggerThanEnd.ReadOnly = true;
         }
-        #region Method
-
         private bool checkIsBeginValLessThanEndValRange()
         {
             if (string.IsNullOrEmpty(TX_RangeBegin.Text)|| string.IsNullOrEmpty(TX_RangeEnd.Text))
@@ -252,6 +247,7 @@ namespace Medical_Analysis_Laboratory.Forms.FormsTests
             RTB_diagnosisValueBetweenRange.Text = getDataFilteredRows(filteredRows, "التشخيص طبيعي");
             RTB_diagnosisValueBiggerThanEnd.Text = getDataFilteredRows(filteredRows, "التشخيص أكبر");
             this.formMain = formMain;
+            this.Text = "تعديل تحليل";
             TX_NameTest.Select();
         
         }
@@ -264,13 +260,15 @@ namespace Medical_Analysis_Laboratory.Forms.FormsTests
         }
         private void clearField()
         {
-          /*  TX_NamePatient.Clear();*/
             TX_NameTest.Clear();
-       /*     TX_Address.Clear();
-            COMP_GenderPatient.SelectedIndex = -1;
-            TX_Phone.Clear();*/
-            RTB_diagnosisValueLessThanBegin.Clear();
+            COMP_isRoot.SelectedIndex = 1;
             RB_No.Checked = true;
+            TX_RangeBegin.Clear();
+            TX_RangeEnd.Clear();
+            RTB_Note.Clear();
+            RTB_diagnosisValueLessThanBegin.Clear();
+            RTB_diagnosisValueBetweenRange.Clear();
+            RTB_diagnosisValueBiggerThanEnd.Clear();
         }
         private void addData()
         {
@@ -375,11 +373,9 @@ namespace Medical_Analysis_Laboratory.Forms.FormsTests
         {
             this.Close();
         }
-     
         private void RB_Yes_CheckedChanged(object sender, EventArgs e)
         {
             setConfigByIsCategory();
-
         }
         private void RB_No_CheckedChanged(object sender, EventArgs e)
         {
@@ -395,49 +391,38 @@ namespace Medical_Analysis_Laboratory.Forms.FormsTests
             isClose = true;
             saveData();
         }
-
-        #endregion
-
         private void COMP_isRoot_SelectedIndexChanged(object sender, EventArgs e)
         {
             changeStateByCompo();
         }
-
         private void TX_NameTest_KeyDown(object sender, KeyEventArgs e)
         {
                 chickEnter(sender, e);
         }
-
         private void TX_RangeBegin_KeyPress(object sender, KeyPressEventArgs e)
         {
             ClsMessageCollections.checkInputTextBoxNumber(sender, e);
         }
-
         private void TX_RangeEnd_KeyPress(object sender, KeyPressEventArgs e)
         {
             ClsMessageCollections.checkInputTextBoxNumber(sender, e);
         }
-
         private void RTB_diagnosisValueLessThanBegin_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
         }
-
         private void RTB_diagnosisValueBetweenRange_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
         }
-
         private void RTB_diagnosisValueBiggerThanEnd_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
         }
-
         private void TX_RangeBegin_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
         }
-
         private void TX_RangeEnd_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
@@ -446,10 +431,10 @@ namespace Medical_Analysis_Laboratory.Forms.FormsTests
         {
             getMessageCheckIsValueRange();
         }
-
         private void TX_RangeEnd_Leave(object sender, EventArgs e)
         {
             getMessageCheckIsValueRange();
         }
+        #endregion
     }
 }

@@ -114,7 +114,7 @@
       <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net35\EPPlus.System.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\الفلاشة\Al-Huda School - مدرسة الهدى -نهائي\AlHudaSchool\bin\Debug\Guna.UI2.dll</HintPath>
+      <HintPath>..\packages\Guna.UI2\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -273,7 +273,6 @@
   <ItemGroup>
     <Compile Include="Classes\Connection\PatientProcess\Cls_PatientsDB.cs" />
     <Compile Include="Classes\Connection\Cls_AccessLayer_DB.cs" />
-    <Compile Include="Classes\Connection\FollowUpProcess\Cls_FollowUpDB.cs" />
     <Compile Include="Classes\Connection\TestProcess\Cls_TestDB.cs" />
     <Compile Include="Classes\Connection\UsersProcess\Cls_UsersDB.cs" />
     <Compile Include="Classes\Connection\VisitsProcess\Cls_VisitsDB.cs" />
@@ -288,17 +287,11 @@
     <Compile Include="Forms\Form-Main.Designer.cs">
       <DependentUpon>Form-Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormsFollowUp\FormDelete.cs">
+    <Compile Include="Forms\FormsAction\FormDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormsFollowUp\FormDelete.Designer.cs">
+    <Compile Include="Forms\FormsAction\FormDelete.Designer.cs">
       <DependentUpon>FormDelete.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormsFollowUp\Form_AddNoteToDischarge.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormsFollowUp\Form_AddNoteToDischarge.Designer.cs">
-      <DependentUpon>Form_AddNoteToDischarge.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsTest\Form_AddTests.cs">
       <SubType>Form</SubType>
@@ -311,12 +304,6 @@
     </Compile>
     <Compile Include="Forms\FormsPatient\Form_AddPatients.Designer.cs">
       <DependentUpon>Form_AddPatients.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormsFollowUp\Form_AddFollowUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormsFollowUp\Form_AddFollowUp.Designer.cs">
-      <DependentUpon>Form_AddFollowUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsUser\Form__AddUsers.cs">
       <SubType>Form</SubType>
@@ -360,12 +347,6 @@
     <Compile Include="Gui\GuiPatients\Patients_UserControl.Designer.cs">
       <DependentUpon>Patients_UserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\GuiFollowUp\FollowUp_UserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Gui\GuiFollowUp\FollowUp_UserControl.Designer.cs">
-      <DependentUpon>FollowUp_UserControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Gui\GuiTests\Test_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -395,20 +376,14 @@
     <EmbeddedResource Include="Forms\Form-Main.resx">
       <DependentUpon>Form-Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormsFollowUp\FormDelete.resx">
+    <EmbeddedResource Include="Forms\FormsAction\FormDelete.resx">
       <DependentUpon>FormDelete.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormsFollowUp\Form_AddNoteToDischarge.resx">
-      <DependentUpon>Form_AddNoteToDischarge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsTest\Form_AddTests.resx">
       <DependentUpon>Form_AddTests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsPatient\Form_AddPatients.resx">
       <DependentUpon>Form_AddPatients.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormsFollowUp\Form_AddFollowUp.resx">
-      <DependentUpon>Form_AddFollowUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsUser\Form__AddUsers.resx">
       <DependentUpon>Form__AddUsers.cs</DependentUpon>
@@ -431,9 +406,6 @@
     <EmbeddedResource Include="Gui\GuiPatients\Patients_UserControl.resx">
       <DependentUpon>Patients_UserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui\GuiFollowUp\FollowUp_UserControl.resx">
-      <DependentUpon>FollowUp_UserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiTests\Test_UserControl.resx">
       <DependentUpon>Test_UserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,20 +421,20 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -518,76 +490,16 @@
     <None Include="Resources\icons8_logout_40px_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_home_50px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_home_480px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_home_50px_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_users_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_users_50px_1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_users_50px_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_department_40px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_schedule_40px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_knowledge_sharing_40px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_test_40px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_maybe_40px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_logout_40px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Back Arrow_60px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_people_60px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\userHome.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\userHome1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_combo_chart_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BranchHome.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CourseHome.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\QuisitionHome.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\testHome.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\departmentHome.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_Combo_Chart_50px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Admin_Settings_Male_50px.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_add_50px_1.png" />
@@ -599,34 +511,7 @@
     <None Include="Resources\icons8_Delete_Trash_50px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_Delete_Trash_50px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_edit_50px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_add_50px_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_search_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_upload_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_upload_50px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_upload_50px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_add_50px_4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_edit_50px_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Delete_Trash_50px_2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_save_50px.png" />
@@ -641,22 +526,10 @@
     <None Include="Resources\icons8_macos_close_50px_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_Add_properties_60px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\High School-bro.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_ok_50px.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add tasks.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Add friends.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Add_Male_User_Group_50px.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Checkmark_32px_1.png" />
@@ -665,91 +538,22 @@
     <None Include="Resources\icons8_cancel_32px_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_filter_and_sort_50px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_return_book_60px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Add notes.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AddCours.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Official Wallpaper 06 of 15 for Samsung Galaxy S9 and Samsung Galaxy S9+ with Dark Blue Polygons - Allpicts.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Official Wallpaper 06 of 15 for Samsung Galaxy S9 and Samsung Galaxy S9+ with Dark Blue Polygons - Allpictsaaaaaaaaaa.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_user_locked_60px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_password_60px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_user_locked_60px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Exams.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_login_rounded_60px.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_login_60px_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_Add_properties_60px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exam.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Student_Male_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Student_Male_50px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\college entrance exam.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_open_in_popup_50px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\college entrance exam %281%29.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_Sync_50px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_Student_Male_50px_2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Back Arrow_60px1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_bookmark_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_c_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_a_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_b_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_d_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_d_50px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_d_40px.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -762,27 +566,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\happy_120px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sad_120px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\confetti_120px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_scorecard_65px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_grades_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_grades_50px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Grades.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_schedule_60px_1.png" />
@@ -803,19 +586,7 @@
     <None Include="Resources\icons8_error_60px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_test_passed_70px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_test_passed_1.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\4006.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Blue Minimalist Health Logo %281%29.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Blue Minimalist Health Logo.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_user_locked_40px.png" />
@@ -890,40 +661,15 @@
     <None Include="Resources\icons8_box_important_50px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_filled_circle_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_filled_circle_50px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_filled_circle_50px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_Admin_Settings_Male_50px_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\تصميم بدون عنوان.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\HomeDes.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CourseHome1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\departmentHome1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exam1.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Grades1.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\High School-bro1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="icons8_nurse_call_60px.ico" />
+    <None Include="Resources\icons8_blood_sample_50px.png" />
+    <None Include="Resources\icons8_flow_chart_50px_2.png" />
     <None Include="Resources\icons8_xls_export_50px_1.png" />
     <None Include="Resources\icons8_xls_export_50px.png" />
     <None Include="Resources\icons8_view_schedule_50px_1.png" />
@@ -932,7 +678,6 @@
     <None Include="Resources\Medical_Analysis_LaboratoryLogo.gif" />
     <None Include="Resources\icons8_medical_history_60px.png" />
     <None Include="Resources\Blood test.gif" />
-    <None Include="Resources\icons8_flow_chart_50px_1.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -382,6 +382,7 @@
             this.MessageShow.ErrorOptions.CloseIconColor = System.Drawing.Color.Red;
             this.MessageShow.ErrorOptions.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold);
             this.MessageShow.ErrorOptions.ForeColor = System.Drawing.Color.Red;
+            this.MessageShow.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
             this.MessageShow.ErrorOptions.IconLeftMargin = 12;
             this.MessageShow.FadeCloseIcon = false;
             this.MessageShow.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.Screen;
@@ -395,7 +396,7 @@
             this.MessageShow.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
             this.MessageShow.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.MessageShow.InformationOptions.ForeColor = System.Drawing.Color.Black;
-            this.MessageShow.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.MessageShow.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
             this.MessageShow.InformationOptions.IconLeftMargin = 12;
             this.MessageShow.Margin = 10;
             this.MessageShow.MaximumSize = new System.Drawing.Size(0, 0);
@@ -417,7 +418,7 @@
             this.MessageShow.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
             this.MessageShow.SuccessOptions.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold);
             this.MessageShow.SuccessOptions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(40)))), ((int)(((byte)(247)))));
-            this.MessageShow.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.MessageShow.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
             this.MessageShow.SuccessOptions.IconLeftMargin = 12;
             this.MessageShow.ViewsMargin = 7;
             this.MessageShow.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -430,7 +431,7 @@
             this.MessageShow.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
             this.MessageShow.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.MessageShow.WarningOptions.ForeColor = System.Drawing.Color.Black;
-            this.MessageShow.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.MessageShow.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
             this.MessageShow.WarningOptions.IconLeftMargin = 12;
             this.MessageShow.ZoomCloseIcon = true;
             // 

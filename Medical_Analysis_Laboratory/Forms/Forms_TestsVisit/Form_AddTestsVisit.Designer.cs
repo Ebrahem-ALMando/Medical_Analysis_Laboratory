@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LBL_NamePatient = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.LBL_TestCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -72,18 +76,16 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.label17 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.LBL_TestCount = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LBL_NamePatient = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GC_rangeValue)).BeginInit();
             this.GC_rangeValue.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -101,8 +103,6 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -121,6 +121,48 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1916, 73);
             this.panel2.TabIndex = 16;
+            // 
+            // LBL_NamePatient
+            // 
+            this.LBL_NamePatient.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_NamePatient.ForeColor = System.Drawing.Color.White;
+            this.LBL_NamePatient.Location = new System.Drawing.Point(687, 15);
+            this.LBL_NamePatient.Name = "LBL_NamePatient";
+            this.LBL_NamePatient.Size = new System.Drawing.Size(181, 42);
+            this.LBL_NamePatient.TabIndex = 72;
+            this.LBL_NamePatient.Text = "احمد";
+            this.LBL_NamePatient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_medical_history_60px;
+            this.pictureBox1.Location = new System.Drawing.Point(1042, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_scorecard_38px;
+            this.pictureBox2.Location = new System.Drawing.Point(351, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 69;
+            this.pictureBox2.TabStop = false;
+            // 
+            // LBL_TestCount
+            // 
+            this.LBL_TestCount.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_TestCount.ForeColor = System.Drawing.Color.White;
+            this.LBL_TestCount.Location = new System.Drawing.Point(196, 21);
+            this.LBL_TestCount.Name = "LBL_TestCount";
+            this.LBL_TestCount.Size = new System.Drawing.Size(74, 28);
+            this.LBL_TestCount.TabIndex = 70;
+            this.LBL_TestCount.Text = "“13”";
+            this.LBL_TestCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -196,7 +238,6 @@
             this.GC_rangeValue.Size = new System.Drawing.Size(366, 388);
             this.GC_rangeValue.TabIndex = 66;
             this.GC_rangeValue.Text = "التحليل - 1";
-            this.GC_rangeValue.Paint += new System.Windows.Forms.PaintEventHandler(this.GC_rangeValue_Paint);
             // 
             // label20
             // 
@@ -743,6 +784,80 @@
             this.panel7.TabIndex = 68;
             this.panel7.Visible = false;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+            this.label19.Location = new System.Drawing.Point(122, 41);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(117, 37);
+            this.label19.TabIndex = 60;
+            this.label19.Text = "اسم التحليل";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox4.BackColor = System.Drawing.Color.White;
+            this.comboBox4.DropDownHeight = 170;
+            this.comboBox4.Font = new System.Drawing.Font("Cairo", 13F);
+            this.comboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.IntegralHeight = false;
+            this.comboBox4.Location = new System.Drawing.Point(20, 81);
+            this.comboBox4.MaxDropDownItems = 5;
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(336, 50);
+            this.comboBox4.TabIndex = 65;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Cairo", 12F);
+            this.textBox4.Location = new System.Drawing.Point(20, 175);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(336, 45);
+            this.textBox4.TabIndex = 61;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+            this.label18.Location = new System.Drawing.Point(122, 134);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(129, 37);
+            this.label18.TabIndex = 66;
+            this.label18.Text = "الـــــقــيــمــة";
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Font = new System.Drawing.Font("Cairo", 12F);
+            this.richTextBox4.Location = new System.Drawing.Point(20, 272);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(336, 98);
+            this.richTextBox4.TabIndex = 67;
+            this.richTextBox4.Text = "";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
+            this.label17.Location = new System.Drawing.Point(123, 227);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(127, 37);
+            this.label17.TabIndex = 68;
+            this.label17.Text = "التشـــخيـــص";
+            // 
             // groupControl4
             // 
             this.groupControl4.AppearanceCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
@@ -767,122 +882,6 @@
             this.groupControl4.TabIndex = 66;
             this.groupControl4.Text = "التحليل - 1";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
-            this.label17.Location = new System.Drawing.Point(123, 227);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(127, 37);
-            this.label17.TabIndex = 68;
-            this.label17.Text = "التشـــخيـــص";
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.Font = new System.Drawing.Font("Cairo", 12F);
-            this.richTextBox4.Location = new System.Drawing.Point(20, 272);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(336, 98);
-            this.richTextBox4.TabIndex = 67;
-            this.richTextBox4.Text = "";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
-            this.label18.Location = new System.Drawing.Point(122, 134);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(129, 37);
-            this.label18.TabIndex = 66;
-            this.label18.Text = "الـــــقــيــمــة";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Cairo", 12F);
-            this.textBox4.Location = new System.Drawing.Point(20, 175);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(336, 45);
-            this.textBox4.TabIndex = 61;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox4.BackColor = System.Drawing.Color.White;
-            this.comboBox4.DropDownHeight = 170;
-            this.comboBox4.Font = new System.Drawing.Font("Cairo", 13F);
-            this.comboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.IntegralHeight = false;
-            this.comboBox4.Location = new System.Drawing.Point(20, 81);
-            this.comboBox4.MaxDropDownItems = 5;
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(336, 50);
-            this.comboBox4.TabIndex = 65;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
-            this.label19.Location = new System.Drawing.Point(122, 41);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(117, 37);
-            this.label19.TabIndex = 60;
-            this.label19.Text = "اسم التحليل";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_scorecard_38px;
-            this.pictureBox2.Location = new System.Drawing.Point(351, 17);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 38);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 69;
-            this.pictureBox2.TabStop = false;
-            // 
-            // LBL_TestCount
-            // 
-            this.LBL_TestCount.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_TestCount.ForeColor = System.Drawing.Color.White;
-            this.LBL_TestCount.Location = new System.Drawing.Point(196, 21);
-            this.LBL_TestCount.Name = "LBL_TestCount";
-            this.LBL_TestCount.Size = new System.Drawing.Size(74, 28);
-            this.LBL_TestCount.TabIndex = 70;
-            this.LBL_TestCount.Text = "“13”";
-            this.LBL_TestCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_medical_history_60px;
-            this.pictureBox1.Location = new System.Drawing.Point(1042, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 71;
-            this.pictureBox1.TabStop = false;
-            // 
-            // LBL_NamePatient
-            // 
-            this.LBL_NamePatient.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_NamePatient.ForeColor = System.Drawing.Color.White;
-            this.LBL_NamePatient.Location = new System.Drawing.Point(687, 15);
-            this.LBL_NamePatient.Name = "LBL_NamePatient";
-            this.LBL_NamePatient.Size = new System.Drawing.Size(181, 42);
-            this.LBL_NamePatient.TabIndex = 72;
-            this.LBL_NamePatient.Text = "احمد";
-            this.LBL_NamePatient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Form_AddTestsVisit
             // 
             this.Appearance.Options.UseFont = true;
@@ -903,6 +902,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GC_rangeValue)).EndInit();
             this.GC_rangeValue.ResumeLayout(false);
             this.GC_rangeValue.PerformLayout();
@@ -925,8 +926,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -975,6 +974,12 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label LBL_TestCount;
+        private System.Windows.Forms.Label LBL_NamePatient;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.RichTextBox richTextBox4;
@@ -982,11 +987,5 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label LBL_TestCount;
-        private System.Windows.Forms.Label LBL_NamePatient;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

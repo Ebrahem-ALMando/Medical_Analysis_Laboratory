@@ -157,14 +157,8 @@
   <data name="DataBaseName" xml:space="preserve">
     <value>Medical_Analysis_Laboratory</value>
   </data>
-  <data name="descriptionText" xml:space="preserve">
-    <value>في هذا التطبيق تم العمل على تصميم نظام إدارة متكامل للحروق، حيث يمكن للمستخدمين إدارة حالات المرضى بكل سهولة وفعالية. يتيح التطبيق إمكانية متابعة المستخدمين، المرضى، حالات الخروج، والمتابعات اليومية بشكل دقيق ومنظم. كما يحتوي على واجهة سهلة الاستخدام تضمن للمستخدمين الوصول السريع إلى مختلف الأقسام، مع الحفاظ على سرعة الأداء وسهولة التنقل بين الشاشات. التطبيق مخصص لتلبية احتياجات العاملين في قطاع الصحة، مع التركيز على تسجيل الحالات الطبية، تحديث البيانات بشكل مستمر، وضمان إدارة فعّالة وسريعة للمرضى في المركز.</value>
-  </data>
   <data name="EmptyData" xml:space="preserve">
     <value>يرجى إدخال جميع البيانات</value>
-  </data>
-  <data name="EmptyDataExam" xml:space="preserve">
-    <value>يرجى تحديث البيانات</value>
   </data>
   <data name="EmptyDataSerarch" xml:space="preserve">
     <value>!!! حقل البحث فارغ</value>
@@ -174,12 +168,6 @@
   </data>
   <data name="ErrorSaveBackupIndesk_C" xml:space="preserve">
     <value>"C" لا يمكن وضع النسخة على القرص </value>
-  </data>
-  <data name="happy_120px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\happy_120px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HomeDes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HomeDes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homepage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +184,8 @@
   <data name="icons8_Admin_Settings_Male_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Admin_Settings_Male_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_a_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_a_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_blood_sample_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_blood_sample_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_bookmark_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_bookmark_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -207,9 +195,6 @@
   </data>
   <data name="icons8_box_important_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_box_important_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_b_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_b_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_calendar_31_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_calendar_31_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,9 +211,6 @@
   <data name="icons8_Combo_Chart_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Combo_Chart_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_c_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_c_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_Delete_Trash_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Delete_Trash_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -237,9 +219,6 @@
   </data>
   <data name="icons8_department_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_department_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_d_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_d_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_edit_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_edit_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,23 +229,11 @@
   <data name="icons8_error_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_error_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_filled_circle_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_filled_circle_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_filled_circle_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_filled_circle_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_filled_circle_50px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_filled_circle_50px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_filter_and_sort_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_filter_and_sort_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_flow_chart_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_flow_chart_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_grades_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_grades_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_flow_chart_50px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_flow_chart_50px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_high_priority_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_high_priority_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,9 +286,6 @@
   <data name="icons8_password_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_password_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_people_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_people_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_save_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_save_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -346,12 +310,6 @@
   <data name="icons8_Session_Timeout_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Session_Timeout_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_Student_Male_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Student_Male_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_Student_Male_50px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Student_Male_50px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_Sync_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Sync_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -361,14 +319,8 @@
   <data name="icons8_test_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_test_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_test_passed_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_test_passed_1.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_Time_Machine_38px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Time_Machine_38px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_trust_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_trust_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_upload_50px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_upload_50px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -402,9 +354,6 @@
   </data>
   <data name="loginBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4006.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logoLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Blue Minimalist Health Logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Medical_Analysis_LaboratoryLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Medical_Analysis_LaboratoryLogo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -442,14 +391,8 @@
   <data name="SuccessSaveBackup" xml:space="preserve">
     <value>تم اجراء النسخة الاحتياطية بنجاح</value>
   </data>
-  <data name="SuccessSubmiteExam" xml:space="preserve">
-    <value>تم إرسال النموذج بنجاح</value>
-  </data>
   <data name="SuccessUpdateData" xml:space="preserve">
     <value>تم التعد يل بنجاح</value>
-  </data>
-  <data name="SuccessUpdateTime" xml:space="preserve">
-    <value>تم تحديث الوقت</value>
   </data>
   <data name="Timeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Timeline.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -485,20 +428,11 @@
   <data name="WarningInputValueInRange" xml:space="preserve">
     <value>يرجى ادخال قيمة اقل من 20</value>
   </data>
-  <data name="WarningisSubmittedExam" xml:space="preserve">
-    <value>تم تقديم هذا الاختبار مسبقا</value>
-  </data>
-  <data name="WarningOverFlowCount" xml:space="preserve">
-    <value>تم تجاوز العدد المسموح به</value>
-  </data>
   <data name="WarningSelectPanentNode" xml:space="preserve">
     <value>يرجى تحديد العقدة الأب</value>
   </data>
   <data name="Winning_the_battle_against_Coronavirus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Winning the battle against Coronavirus.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_2148748915" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2148748915.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_2148748915_removebg_preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2148748915-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

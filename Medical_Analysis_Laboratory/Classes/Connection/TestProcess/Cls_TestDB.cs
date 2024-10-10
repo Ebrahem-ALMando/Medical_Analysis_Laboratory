@@ -11,7 +11,7 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.TestProcess
         //==> Process Test Forms
 
         //    <=============== Method ======================>
-
+        #region Function
         //==> 1 get Data To Test
         public DataTable getDataTest()
         {
@@ -145,7 +145,6 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.TestProcess
             }
 
         }
-
         //==> 6 get Data Patient Test By Visit
         public DataTable getDataPatientTestsByVisit(int id)
         {
@@ -167,6 +166,6 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.TestProcess
             }
 
         }
-
+        #endregion
     }
 }

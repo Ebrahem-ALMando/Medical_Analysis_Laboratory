@@ -11,14 +11,12 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.VisitTestsProcess
     internal class Cls_VisitTestDB
     {
         Cls_AccessLayer_DB connection = new Cls_AccessLayer_DB();
-        //==> Process Visit Test Forms And Gui
+        //==> Process Tests Visi  Forms
 
         //    <=============== Method ======================>
 
-        //==> 1 getData To Visit Test
-
-
-        //==> 2 Insert To Visit Test 
+        #region Function
+        //==> 1 Insert Tests  To Visit 
         public void insertTestToVisit(int idPatientVisit,int idTest,int idUser, float testValue, string testDiagnosi)
         {
             try
@@ -45,5 +43,6 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.VisitTestsProcess
                 Console.WriteLine(ex.Message);
             }
         }
+        #endregion
     }
 }

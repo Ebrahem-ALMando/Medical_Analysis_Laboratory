@@ -38,7 +38,6 @@ namespace Medical_Analysis_Laboratory.Gui.GuiHome
             InitializeComponent();
             userVerification();
             loadInitData(formMain);
-
         }
         #region Method
         public static Patients_UserControl Instance(Form form)
@@ -135,7 +134,6 @@ namespace Medical_Analysis_Laboratory.Gui.GuiHome
                 address = dataGridViewPatients.CurrentRow.Cells[4].Value.ToString();
                 phone = dataGridViewPatients.CurrentRow.Cells[5].Value.ToString();
                 note = dataGridViewPatients.CurrentRow.Cells[7].Value.ToString();
-
                 BTN_Delete.Enabled = Convert.ToBoolean(action.getDataIsCanDeletePatient(id).Rows[0][0].ToString() == "0");
 
             }
@@ -287,32 +285,24 @@ namespace Medical_Analysis_Laboratory.Gui.GuiHome
         }
         private void BTN_Export_Click(object sender, EventArgs e)
         {
-      
-
-
-            // إنشاء ملف Excel جديد
             try
             {
-
-
                 using (ExcelPackage excelPackage = new ExcelPackage())
                 {
-                    // إنشاء ورقة Excel
                     ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("المرضى");
                     worksheet.Cells.Style.Font.Name = "Cairo";
-                    worksheet.View.RightToLeft = true; // تعيين اتجاه النص إلى اليمين
+                    worksheet.View.RightToLeft = true; 
                     worksheet.Cells.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
                
-                    // تنسيق رأس الأعمدة
                     for (int col = 1; col <= dataGridViewPatients.Columns.Count; col++)
                     {
                         worksheet.Column(col).Width = 12.5;
                         var cell = worksheet.Cells[1, col];
                         cell.Value = dataGridViewPatients.Columns[col - 1].HeaderText;
-                        cell.Style.Font.Bold = true; // جعل الخط بولد
+                        cell.Style.Font.Bold = true; 
                         cell.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-                        cell.Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#b40100")); // تغيير لون الخلفية
-                        cell.Style.Font.Color.SetColor(System.Drawing.Color.White); // تغيير لون الخط إلى أبيض
+                        cell.Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#b40100"));
+                        cell.Style.Font.Color.SetColor(System.Drawing.Color.White);
                     }
                     worksheet.Column(dataGridViewPatients.Columns.Count).Width = 23;
                     worksheet.Column(2).Width = 17;
@@ -320,32 +310,21 @@ namespace Medical_Analysis_Laboratory.Gui.GuiHome
                     worksheet.Column(7).Width = 8;
                     worksheet.Column(8).Width = 8;
                     worksheet.Column(10).Width = 8;
-
-
-
-
-
-                    // حلقة لنسخ البيانات من DataGridView إلى Excel
+                    
                     for (int row = 1; row <= dataGridViewPatients.Rows.Count; row++)
                     {
                         for (int col = 1; col <= dataGridViewPatients.Columns.Count; col++)
                         {
-                            // يجب أن تكون البيانات في صفحة DataGridView مُستنسخة في الصفحة الثانية للورقة Excel
                             worksheet.Cells[row + 1, col].Value = dataGridViewPatients.Rows[row - 1].Cells[col - 1].Value.ToString();
                         }
                     }
                     int numberOfPatientes = dataGridViewPatients.Rows.Count;
-                   
-                  
-
 
                     worksheet.Cells["O3"].Value = "عدد المرضى:";
                     worksheet.Cells["O3"].Style.Font.Bold = true;
                     worksheet.Cells["O3"].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
                     worksheet.Cells["O3"].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#b40100"));
-
                     worksheet.Cells["O3"].Style.Font.Color.SetColor(System.Drawing.Color.White);
-                 
 
                     worksheet.Column(15).Width = 15;
                     worksheet.Column(16).Width = 5;
@@ -357,11 +336,9 @@ namespace Medical_Analysis_Laboratory.Gui.GuiHome
                     worksheet.Cells["P3"].Style.Font.Color.SetColor(System.Drawing.Color.White);
                     worksheet.Cells["P3"].Value = numberOfPatientes;
 
-
-                    // تنسيق البيانات كجدول
                     var table = worksheet.Tables.Add(new ExcelAddressBase(1, 1, dataGridViewPatients.Rows.Count + 1, dataGridViewPatients.Columns.Count), "جدول_المرضى");
                     table.TableStyle = OfficeOpenXml.Table.TableStyles.Light1;
-                    // حفظ الملف
+                  
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
                     saveFileDialog.Filter = "ملفات Excel (*.xlsx)|*.xlsx";
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)

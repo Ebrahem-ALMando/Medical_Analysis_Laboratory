@@ -462,7 +462,6 @@
             this.TX_Search.Size = new System.Drawing.Size(331, 54);
             this.TX_Search.TabIndex = 4;
             this.TX_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TX_Search.TextChanged += new System.EventHandler(this.TX_Search_TextChanged);
             this.TX_Search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TX_Search_KeyDown);
             // 
             // label9
@@ -534,7 +533,7 @@
             this.groupControl1.AppearanceCaption.Options.UseTextOptions = true;
             this.groupControl1.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.groupControl1.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.groupControl1.CaptionImageOptions.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_flow_chart_50px_1;
+            this.groupControl1.CaptionImageOptions.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_flow_chart_50px_2;
             this.groupControl1.CaptionImageOptions.Location = DevExpress.Utils.GroupElementLocation.AfterText;
             this.groupControl1.CaptionImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.CommonPalette;
             this.groupControl1.Controls.Add(this.TR_CategoryTest);
@@ -815,7 +814,7 @@
             this.groupControl2.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.groupControl2.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.groupControl2.CaptionImageOptions.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_flow_chart_50px_1;
+            this.groupControl2.CaptionImageOptions.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_flow_chart_50px_2;
             this.groupControl2.CaptionImageOptions.Location = DevExpress.Utils.GroupElementLocation.AfterText;
             this.groupControl2.CaptionImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.CommonPalette;
             this.groupControl2.Controls.Add(this.TR_Tests);
@@ -874,7 +873,6 @@
             this.TR_Tests.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TR_Tests_AfterSelect);
             this.TR_Tests.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TR_Tests_KeyDown);
             this.TR_Tests.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TR_Tests_MouseClick);
-            this.TR_Tests.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.TR_Tests_MouseDoubleClick);
             // 
             // CMS_TRTests
             // 
@@ -899,7 +897,7 @@
             this.CMS_TRTests.RenderStyle.SeparatorColor = System.Drawing.Color.White;
             this.CMS_TRTests.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.CMS_TRTests.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CMS_TRTests.Size = new System.Drawing.Size(228, 164);
+            this.CMS_TRTests.Size = new System.Drawing.Size(152, 136);
             this.CMS_TRTests.Opening += new System.ComponentModel.CancelEventHandler(this.CMS_TRTests_Opening);
             // 
             // TSM_addData
@@ -910,7 +908,7 @@
             this.TSM_addData.Name = "TSM_addData";
             this.TSM_addData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TSM_addData.RightToLeftAutoMirrorImage = true;
-            this.TSM_addData.Size = new System.Drawing.Size(227, 40);
+            this.TSM_addData.Size = new System.Drawing.Size(151, 40);
             this.TSM_addData.Text = "إضافة";
             this.TSM_addData.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.TSM_addData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -919,7 +917,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(224, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(148, 6);
             // 
             // TSM_updateData
             // 
@@ -929,7 +927,7 @@
             this.TSM_updateData.Name = "TSM_updateData";
             this.TSM_updateData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TSM_updateData.RightToLeftAutoMirrorImage = true;
-            this.TSM_updateData.Size = new System.Drawing.Size(227, 40);
+            this.TSM_updateData.Size = new System.Drawing.Size(151, 40);
             this.TSM_updateData.Text = "تعديل";
             this.TSM_updateData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.TSM_updateData.Click += new System.EventHandler(this.TSM_updateData_Click);
@@ -937,7 +935,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(224, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(148, 6);
             // 
             // TSM_deleteData
             // 
@@ -947,7 +945,7 @@
             this.TSM_deleteData.Name = "TSM_deleteData";
             this.TSM_deleteData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TSM_deleteData.RightToLeftAutoMirrorImage = true;
-            this.TSM_deleteData.Size = new System.Drawing.Size(227, 40);
+            this.TSM_deleteData.Size = new System.Drawing.Size(151, 40);
             this.TSM_deleteData.Text = "حذف";
             this.TSM_deleteData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.TSM_deleteData.Click += new System.EventHandler(this.TSM_deleteData_Click);
@@ -996,7 +994,7 @@
             this.groupControl4.AppearanceCaption.Options.UseTextOptions = true;
             this.groupControl4.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.groupControl4.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.groupControl4.CaptionImageOptions.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_Combo_Chart_50px_1;
+            this.groupControl4.CaptionImageOptions.Image = global::Medical_Analysis_Laboratory.Properties.Resources.icons8_blood_sample_50px;
             this.groupControl4.CaptionImageOptions.Location = DevExpress.Utils.GroupElementLocation.AfterText;
             this.groupControl4.CaptionImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.CommonPalette;
             this.groupControl4.Controls.Add(this.dataGridViewCurrentNodeInfo);

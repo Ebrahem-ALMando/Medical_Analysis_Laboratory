@@ -13,7 +13,7 @@ namespace Medical_Analysis_Laboratory.Gui.GuiHome
         }
         #region Function
         private void loadInitConfig()=>
-       LBL_NameUser.Text += Cls_UsersDB.nameUser ?? "Gust";
+        LBL_NameUser.Text += Cls_UsersDB.nameUser ?? "Gust";
         public static Home_UserControl Instance()
         {
             //==> Freeing resources and not cloning more than once

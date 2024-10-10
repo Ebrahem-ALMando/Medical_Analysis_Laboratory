@@ -36,7 +36,6 @@ namespace Medical_Analysis_Laboratory
                        
                         return false;
                     }
-
                 }
                 
             }

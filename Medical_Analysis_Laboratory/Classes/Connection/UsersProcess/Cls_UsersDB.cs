@@ -6,6 +6,7 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.UsersProcess
 {
     internal class Cls_UsersDB
     {
+        #region Var-Pro
         public static string userName { get; set; }
         public static string password { get; set; }
         public static int idUser { get; set; } = 0;
@@ -14,10 +15,11 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.UsersProcess
         public static bool isLogin { get; set; }
 
         Cls_AccessLayer_DB connection = new Cls_AccessLayer_DB();
+        #endregion
         //==> Process Users Forms
 
         //    <=============== Method ======================>
-
+        #region Function
         //==> 1 getData To Users
         public DataTable getDataUsers()
         {
@@ -90,7 +92,6 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.UsersProcess
             }
 
         }
-
         //==> 5 Insert To Users
         public void insertUser(string name, string age,string phone, string address
            , string userName, string password, string typeUser, DateTime date)
@@ -248,6 +249,7 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.UsersProcess
                 return dataUser;
             }
         }
+        #endregion
     }
 
 }

@@ -12,6 +12,7 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.PatientProcess
         //    <=============== Method ======================>
 
         //==> 1 getData To Patients
+        #region Function
         public DataTable getDataPatients()
         {
             DataTable dataPatients = new DataTable();
@@ -146,85 +147,7 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.PatientProcess
             }
 
         }
-        //==> 7 Increment Number Vists To Patients
-        public void incrementNumberVists(int idPatient)
-        {
-            try
-            {
-                connection.open();
-                SqlParameter[] param = new SqlParameter[1];
-                param[0] = new SqlParameter("@idPatients", SqlDbType.Int);
-                param[0].Value = idPatient;
-                connection.process("incrementNumberVists", param);
-                connection.cloes();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-        }
-        //==> 8 Decrement Number Vists To Patients
-        public void decrementNumberVisits(int idPatient)
-        {
-            try
-            {
-                connection.open();
-                SqlParameter[] param = new SqlParameter[1];
-                param[0] = new SqlParameter("@idPatients", SqlDbType.Int);
-                param[0].Value = idPatient;
-                connection.process("decrementNumberVisits", param);
-                connection.cloes();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-        }
-        //==> 9 Set Is Referral To Patients
-        public void setIsReferral(int idPatient,string referral)
-        {
-            try
-            {
-                connection.open();
-                SqlParameter[] param = new SqlParameter[2];
-                param[0] = new SqlParameter("@idPatients", SqlDbType.Int);
-                param[0].Value = idPatient;
-                param[1] = new SqlParameter("@referral", SqlDbType.NVarChar);
-                param[1].Value = referral;
-                connection.process("setIsReferral", param);
-                connection.cloes();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-        }
-        //==> 10 Set Is Test To Patients
-        public void setIsTest(int idPatient, string Test)
-        {
-            try
-            {
-                connection.open();
-                SqlParameter[] param = new SqlParameter[3];
-                param[0] = new SqlParameter("@idPatients", SqlDbType.Int);
-                param[0].Value = idPatient;
-                param[1] = new SqlParameter("@Test", SqlDbType.NVarChar);
-                param[1].Value = Test;
-                param[2] = new SqlParameter("@TestDate", SqlDbType.Date);
-                param[2].Value = DateTime.Now;
-                connection.process("setIsTest", param);
-                connection.cloes();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-        }
-        //==> 11 Get Check Is Delete
+        //==> 7 Get Check Is Delete
         public DataTable getDataIsCanDeletePatient(int id)
         {
             DataTable dataPatient = new DataTable();
@@ -244,9 +167,10 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.PatientProcess
                 return dataPatient;
             }
         }
-     
+        #endregion
+
     }
-  
-   
+
+
 }
 

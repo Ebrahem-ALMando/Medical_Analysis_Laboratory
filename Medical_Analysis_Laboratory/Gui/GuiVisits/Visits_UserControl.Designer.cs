@@ -434,7 +434,6 @@
             this.dataGridViewVisits.TabIndex = 17;
             this.dataGridViewVisits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewVisits_CellClick);
             this.dataGridViewVisits.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewVisits_KeyDown);
-            this.dataGridViewVisits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridViewVisits_KeyPress);
             // 
             // MessageShow
             // 

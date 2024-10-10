@@ -1,43 +1,32 @@
-﻿using DevExpress.DXTemplateGallery.Extensions;
-using DevExpress.Utils.Behaviors.Common;
-using Medical_Analysis_Laboratory.Classes;
+﻿using Medical_Analysis_Laboratory.Classes;
 using Medical_Analysis_Laboratory.Classes.Connection.TestProcess;
 using Medical_Analysis_Laboratory.Classes.Connection.VisitsProcess;
-using OfficeOpenXml.FormulaParsing.Excel.Functions.Math;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 
 namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
 {
     public partial class Form_AddTestsVisit : DevExpress.XtraEditors.XtraForm
     {
-        Cls_TestDB testDB=new Cls_TestDB();
+        #region VAR
+        Cls_TestDB testDB =new Cls_TestDB();
         private DataTable cachedDataTestToVisit;
         private DataTable cachedDataNameTestToVisit;
         int numberCompo = 1;
         private int testNumber = -1;
         private bool isUpdating = false;
+        #endregion
         public Form_AddTestsVisit(int testNumber,string namePatient)
         {
             InitializeComponent();
             loadData(testNumber, namePatient);
-      /*      enabledCompo();*/
-
-
+           /*enabledCompo();*/
         }
-
-
-
-
-
+        #region Function
         /*     private void enabledCompo()
              {
                  MessageBox.Show(numberCompo.ToString());
@@ -74,38 +63,28 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
                      }
                  }
              }*/
-        public  void checkInputTextBoxNumber(object sender, KeyPressEventArgs e)
+        public void checkInputTextBoxNumber(object sender, KeyPressEventArgs e)
         {
             var textBox = sender as TextBox;
-            
-            // السماح بالأرقام، النقطة العشرية مرة واحدة فقط، وأزرار التحكم مثل Backspace
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true; // منع الإدخال إذا لم يكن رقمًا، أو نقطة أو زر تحكم
-                ClsMessageCollections.showWarningInputJustNumberMessageData(); // عرض رسالة تحذير
+                e.Handled = true;
+                ClsMessageCollections.showWarningInputJustNumberMessageData(); 
             }
             else if (e.KeyChar == '.' && textBox.Text.Contains("."))
             {
-                e.Handled = true; // منع الإدخال إذا تم إدخال النقطة أكثر من مرة
+                e.Handled = true;
             }
             else
             {
-                e.Handled = false; // السماح بالإدخال
+                e.Handled = false; 
             }
         }
-
-        private void GC_rangeValue_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void loadData(int testNumber,string namePatient)
         {
-
-            // إذا كانت البيانات غير موجودة مسبقاً في المتغير، قم باستدعاء الدالة لجلب البيانات
             if (cachedDataTestToVisit == null)
             {
-                cachedDataTestToVisit = testDB.getDataTestToVisit(); // استدعاء الدالة مرة واحدة فقط
+                cachedDataTestToVisit = testDB.getDataTestToVisit(); 
                 cachedDataNameTestToVisit = cachedDataTestToVisit;
             }
             this.testNumber = testNumber;
@@ -113,8 +92,6 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
             LBL_TestCount.Text = $"“{testNumber}”";
             CreateRepeatedControls(testNumber);
         }
-
-
         private Label createLable(string text,Point loc)
         {
             Label labelName = new Label
@@ -157,16 +134,11 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
                textBoxValue.Enabled = true;
                textBoxValue.BackColor = Color.White;
                textBoxValue.Clear();
-
-
             }
             else
             {
                 textBoxValue.Enabled = false;
                 textBoxValue.BackColor = Color.FromArgb(240, 240, 240);
-                
-
-
             }
         }
         private void HandleTestSelection(TextBox textBox, ComboBox comboBox)
@@ -175,8 +147,6 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
             if (!isUpdating)
             {
                 updateRangeValue(textBox, comboBox);
-              
-
              /*   updateNameTest(comboBox);*/
             }
            /* getIdTestSelected(comboBox);*/
@@ -259,37 +229,36 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
         }
         /*     private void updateNameTest(ComboBox passedComboBox)
              {
-                 // تأكد أن البيانات ليست فارغة
+            
                  if (cachedDataTestToVisit == null || cachedDataTestToVisit.Rows.Count == 0)
                  {
                      return;
                  }
 
-                 // احصل على المعرف المراد تصفيته
+               
                  int selectedTestId = getIdTestSelected(passedComboBox);
 
-                 // تصفية البيانات باستبعاد المعرف المحدد
+    
                  DataRow[] filteredData = cachedDataTestToVisit.Select("المعرف <> " + selectedTestId);
 
-                 // تحقق من وجود بيانات بعد التصفية
+
                  if (filteredData != null && filteredData.Length > 0)
                  {
-                     // إنشاء نسخة جديدة من البيانات المفلترة
+
                      DataTable updatedData = filteredData.CopyToDataTable();
 
-                     // تحديث جميع ComboBox باستثناء الـ passedComboBox
+     
                      for (int i = 0; i < testNumber; i++)
                      {
-                         // البحث عن ComboBox باستخدام الاسم الفريد
+         
                          var comboBoxToUpdate = this.Controls.Find($"COMP_NameTest_{i + 1}", true).FirstOrDefault() as ComboBox;
 
-                         // التحقق من أن الـ ComboBox تم العثور عليه وليس هو الـ passedComboBox
                          if (comboBoxToUpdate != null && comboBoxToUpdate.Name != passedComboBox.Name)
                          {
                              Console.WriteLine("======Found=====");
                              Console.WriteLine(comboBoxToUpdate.Name);
 
-                             // تحديث البيانات داخل الـ ComboBox
+                     
                              comboBoxToUpdate.BindingContext = new BindingContext();
                              comboBoxToUpdate.DataSource = updatedData;
                              comboBoxToUpdate.DisplayMember = "الاسم";
@@ -299,113 +268,91 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
                      }
                  }
              }*/
+        /*  private void updateNameTest(ComboBox passedComboBox)
+          {
+              DataRow[] filteredData;
+              List<string> selectedIds = new List<string>();
+              for (int i = 0; i < testNumber; i++)
+              {
+                  var compo = this.Controls.Find($"COMP_NameTest_{i + 1}", true).FirstOrDefault() as ComboBox;
 
-        private void updateNameTest(ComboBox passedComboBox)
-        {
-            DataRow[] filteredData;
+                  if (compo != null && compo.SelectedIndex != -1)
+                  {
+                      string selectedId = getIdTestSelected(compo).ToString();
+                      selectedIds.Add(selectedId); 
+                  }
+              }
+              string filterCondition = string.Join(" OR ", selectedIds.Select(id => $"المعرف = {id}"));
 
-            // قائمة لتخزين المعرفات المحددة
-            List<string> selectedIds = new List<string>();
+              if (selectedIds.Count > 0)
+              {
+                  string filteredCondition = "المعرف NOT IN (" + string.Join(", ", selectedIds) + ")";
+                  filteredData = cachedDataTestToVisit.Select(filteredCondition);
+              }
+              else
+              {
+                  filteredData = cachedDataTestToVisit.Select(); 
+              }
+              if (filteredData != null && filteredData.Length > 0)
+              {
+                  DataTable updatedData = filteredData.CopyToDataTable();
+                  cachedDataNameTestToVisit = updatedData;
+                  for (int i = 0; i < testNumber; i++)
+                  {
+                      var comboBoxToUpdate = this.Controls.Find($"COMP_NameTest_{i + 1}", true).FirstOrDefault() as ComboBox;
 
-            for (int i = 0; i < testNumber; i++)
-            {
-                var compo = this.Controls.Find($"COMP_NameTest_{i + 1}", true).FirstOrDefault() as ComboBox;
-
-                // تحقق مما إذا كانت قيمة ComboBox محددة
-                if (compo != null && compo.SelectedIndex != -1)
-                {
-                    string selectedId = getIdTestSelected(compo).ToString();
-                    selectedIds.Add(selectedId); // إضافة المعرف المحدد إلى القائمة
-                }
-            }
-
-            // بناء شرط التصفيه باستخدام المعرفات المحددة
-            string filterCondition = string.Join(" OR ", selectedIds.Select(id => $"المعرف = {id}"));
-
-            if (selectedIds.Count > 0)
-            {
-                // استخدام NOT في جملة SELECT
-                string filteredCondition = "المعرف NOT IN (" + string.Join(", ", selectedIds) + ")";
-                filteredData = cachedDataTestToVisit.Select(filteredCondition);
-            }
-            else
-            {
-                // إذا لم يكن هناك معرّفات محددة، يمكن استخدام جميع البيانات
-                filteredData = cachedDataTestToVisit.Select(); // أو أي شرط آخر تراه مناسبًا
-            }
-
-
-
-
-            if (filteredData != null && filteredData.Length > 0)
-            {
-                DataTable updatedData = filteredData.CopyToDataTable();
-                cachedDataNameTestToVisit = updatedData;
-                for (int i = 0; i < testNumber; i++)
-                {
-                    var comboBoxToUpdate = this.Controls.Find($"COMP_NameTest_{i + 1}", true).FirstOrDefault() as ComboBox;
-
-                    if (comboBoxToUpdate != null && comboBoxToUpdate.Name != passedComboBox.Name&&
-                        (comboBoxToUpdate.SelectedIndex == -1|| comboBoxToUpdate.Text==passedComboBox.Text)
-                        )
-                    {
-                        Console.WriteLine("=-=-=-=-=-=-");
-                        Console.WriteLine("======Found=====New");
-                        Console.WriteLine(comboBoxToUpdate.Name);
-                        isUpdating = true;
-                        comboBoxToUpdate.BindingContext = new BindingContext();
-                        comboBoxToUpdate.DataSource = updatedData;
-                        comboBoxToUpdate.DisplayMember = "الاسم";
-                        comboBoxToUpdate.ValueMember = "المعرف";
-                        comboBoxToUpdate.SelectedIndex = -1;
-                        isUpdating = false;
-                    }
-/*                    if(comboBoxToUpdate != null && comboBoxToUpdate.Text != passedComboBox.Text&&
-                        comboBoxToUpdate.SelectedIndex!=-1)
-                    {
-                        string nameTest= comboBoxToUpdate.Text;
-                        isUpdating = true;
-                        comboBoxToUpdate.BindingContext = new BindingContext();
-                        comboBoxToUpdate.DataSource = updatedData;
-                        comboBoxToUpdate.DisplayMember = "الاسم";
-                        comboBoxToUpdate.ValueMember = "المعرف";
-                        comboBoxToUpdate.Text = nameTest;
-                        isUpdating = false;
-                    }*/
-                }
+                      if (comboBoxToUpdate != null && comboBoxToUpdate.Name != passedComboBox.Name&&
+                          (comboBoxToUpdate.SelectedIndex == -1|| comboBoxToUpdate.Text==passedComboBox.Text)
+                          )
+                      {
+                          Console.WriteLine("=-=-=-=-=-=-");
+                          Console.WriteLine("======Found=====New");
+                          Console.WriteLine(comboBoxToUpdate.Name);
+                          isUpdating = true;
+                          comboBoxToUpdate.BindingContext = new BindingContext();
+                          comboBoxToUpdate.DataSource = updatedData;
+                          comboBoxToUpdate.DisplayMember = "الاسم";
+                          comboBoxToUpdate.ValueMember = "المعرف";
+                          comboBoxToUpdate.SelectedIndex = -1;
+                          isUpdating = false;
+                      }
+                      */
+        /*  if(comboBoxToUpdate != null && comboBoxToUpdate.Text != passedComboBox.Text&&
+                          comboBoxToUpdate.SelectedIndex!=-1)
+                      {
+                          string nameTest= comboBoxToUpdate.Text;
+                          isUpdating = true;
+                          comboBoxToUpdate.BindingContext = new BindingContext();
+                          comboBoxToUpdate.DataSource = updatedData;
+                          comboBoxToUpdate.DisplayMember = "الاسم";
+                          comboBoxToUpdate.ValueMember = "المعرف";
+                          comboBoxToUpdate.Text = nameTest;
+                          isUpdating = false;
+                      } }*/
+        /*     foreach (var control in flowLayoutPanel1.Controls)
+             {
 
 
+                 if (control is ComboBox comboBox && comboBox != passedComboBox)
+                 {
+                     Console.WriteLine(comboBox.Name + "asdasdad");
 
-           /*     foreach (var control in flowLayoutPanel1.Controls)
-                {
-
-
-                    if (control is ComboBox comboBox && comboBox != passedComboBox)
-                    {
-                        Console.WriteLine(comboBox.Name + "asdasdad");
-
-                        comboBox.BindingContext = new BindingContext();
+                     comboBox.BindingContext = new BindingContext();
 
 
-                        comboBox.DataSource = updatedData;
+                     comboBox.DataSource = updatedData;
 
 
-                        comboBox.DisplayMember = "الاسم";
-                        comboBox.ValueMember = "المعرف";
+                     comboBox.DisplayMember = "الاسم";
+                     comboBox.ValueMember = "المعرف";
 
-                        comboBox.SelectedIndex = -1;
-                    }
-                }*/
-            }
-        }
-
+                     comboBox.SelectedIndex = -1;
+                 }
+             }}}*/
         private void CreateRepeatedControls(int numberOfCopies)
         {
             for (int i = 0; i < numberOfCopies; i++)
             {
-
-              
-                // إنشاء GroupControl جديد لكل تكرار
                 var groupControl = new DevExpress.XtraEditors.GroupControl
                 {
                     AppearanceCaption =
@@ -449,11 +396,9 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
                     ValueMember = "المعرف",
                     DisplayMember = "الاسم",
                     TabIndex = 0,
-                  /*  Enabled = false,*/
                  };
                 COMP_NameTest_.BindingContext = new BindingContext();
                 COMP_NameTest_.SelectedIndex = -1;
-
             
                 Label lblValTest =createLable("الـــــقــيــمــة", new Point(211, 134));
                 TextBox textBoxValue = new TextBox
@@ -533,7 +478,6 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
                 groupControl.Controls.Add(labelDiagnosis);
                 groupControl.Controls.Add(richTextBoxDiagnosis);
 
-                // إضافة الحاوية إلى الـForm
                 flowLayoutPanel1.Controls.Add(groupControl);
 
 
@@ -554,7 +498,6 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
             {
                 if (info.NameCompoTest.SelectedIndex == -1 || info.NameTextValue.Text == "")
                     return false;
-              
             }
             return true;
         }
@@ -569,7 +512,6 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
                         StorageCacheVisit.StorageCacheVisits.AddRange(StorageCacheVisit.StorageCacheVisitsTemp);
                         StorageCacheVisit.StorageCacheVisitsTemp.Clear();
                         this.Close();
-                   
                     }
                 }
                 else
@@ -582,11 +524,11 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
+        #region Event
         private void BTN_Add_Close_Click(object sender, EventArgs e)
         {
-        
             saveData();
-
         }
 
         private void BTN_Close_Click(object sender, EventArgs e)
@@ -594,5 +536,6 @@ namespace Medical_Analysis_Laboratory.Forms.Forms_TestsVisit
             StorageCacheVisit.StorageCacheVisitsTemp.Clear();
             this.Close();
         }
+        #endregion
     }
 }

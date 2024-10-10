@@ -13,7 +13,6 @@ namespace Medical_Analysis_Laboratory.Forms.FormsUser
         private string lastUserName;
         private int id;
         Form formMain;
-        
         private bool isClose;
         Cls_UsersDB action = new Cls_UsersDB();
         #endregion
@@ -27,12 +26,11 @@ namespace Medical_Analysis_Laboratory.Forms.FormsUser
             address,string userName,string password,string typeUser)
         {
             InitializeComponent();
-            this.Text = "تعديل مستخدم";
             this.id = id;
             loadData(name, age, phone, address, userName, password, typeUser);
             this.formMain = formMain;
-
         }
+
         #region Function
         private void showSuccessAddMessageData()
         {
@@ -218,69 +216,52 @@ namespace Medical_Analysis_Laboratory.Forms.FormsUser
         {
             checkUserName(TX_UserName.Text);
         }
-
         private void TX_Password_TextChanged(object sender, EventArgs e)
         {
             checkPassword();
         }
-
         private void BTN_Add_Click(object sender, EventArgs e)
         {
             isClose = false;
             saveData();
         }
-
         private void BTN_AddClose_Click(object sender, EventArgs e)
         {
             isClose = true;
             saveData();
         }
-
         private void BTN_Close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void TX_Phone_User_KeyPress(object sender, KeyPressEventArgs e)
         {
             ClsMessageCollections.checkInputTextBoxNumber(sender, e);
         }
-
         private void TX_Name_User_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
         }
-
-        private void COMP_Patients_KeyDown(object sender, KeyEventArgs e)
-        {
-            chickEnter(sender, e);
-        }
-
         private void TX_Phone_User_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
         }
-
         private void TX_Address_User_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
         }
-
         private void TX_UserName_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
         }
-
         private void TX_Password_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);
         }
-
         private void TX_Age_KeyPress(object sender, KeyPressEventArgs e)
         {
             ClsMessageCollections.checkInputTextBoxNumber(sender, e);
         }
-
         private void TX_Age_KeyDown(object sender, KeyEventArgs e)
         {
             chickEnter(sender, e);

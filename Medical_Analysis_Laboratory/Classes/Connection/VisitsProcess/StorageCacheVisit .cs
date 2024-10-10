@@ -24,19 +24,17 @@ namespace Medical_Analysis_Laboratory.Classes.Connection.VisitsProcess
         }
         public void RemoveItemById(Guid id,DataGridView DGV)
         {
-
             var itemToRemove = StorageCacheVisits.FirstOrDefault(item => item.Id == id);
-
 
             if (itemToRemove != null)
             {
                 StorageCacheVisits.Remove(itemToRemove);
                 DGV.Rows.Remove(DGV.CurrentRow);
-                Console.WriteLine("تم حذف العنصر بنجاح.");
+                Console.WriteLine("Success deleted .");
             }
             else
             {
-                Console.WriteLine("لم يتم العثور على العنصر بالمعرف المحدد.");
+                Console.WriteLine("Not Found .");
             }
         }
 

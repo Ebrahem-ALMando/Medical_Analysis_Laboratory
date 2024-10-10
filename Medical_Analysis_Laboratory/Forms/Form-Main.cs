@@ -1,6 +1,5 @@
 ﻿using Medical_Analysis_Laboratory.Classes.Connection.UsersProcess;
 using Medical_Analysis_Laboratory.Classes.Home;
-using Medical_Analysis_Laboratory.Gui.GuiFollowUp;
 using Medical_Analysis_Laboratory.Gui.GuiTest;
 using Medical_Analysis_Laboratory.Gui.GuiHome;
 using Medical_Analysis_Laboratory.Gui.GuiUsers;
@@ -21,7 +20,6 @@ namespace Medical_Analysis_Laboratory
         private bool islogout=false;
         private Guna2Button currentButton = null;
         private Guna2Button previousButton = null;
-       
         Image oldImage = null;
         public Form_Main()
         {
@@ -45,7 +43,6 @@ namespace Medical_Analysis_Laboratory
                 {
                     BTN_Users.Visible = false;
                     BTN_Visits.Visible = false;
-                    BTN_FollowUp.Visible = false;
                     BTN_Tests.Visible = false;
                     panel2.Margin = new Padding(3, 200, 3, 3);
                 }
@@ -159,12 +156,6 @@ namespace Medical_Analysis_Laboratory
         {
             pageManager.LoadPage(Patients_UserControl.Instance(this));
             var image = Properties.Resources.icons8_nurse_call_60px;
-            changeColorBTN(sender, image);
-        }
-        private void BTN_FollowUp_Click(object sender, EventArgs e)
-        {
-            pageManager.LoadPage(FollowUp_UserControl.Instance(this));
-            var image = Properties.Resources.icons8_schedule_60px;
             changeColorBTN(sender, image);
         }
         private void BTN_TestCases_Click(object sender, EventArgs e)

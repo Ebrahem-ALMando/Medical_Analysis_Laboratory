@@ -62,7 +62,6 @@ namespace Medical_Analysis_Laboratory.Gui.GuiUsers
                 MessageBox.Show(ex.Message);
             }
 
-            /*  COMP_FilterData.SelectedIndex = 0;*/
         }
         public void getData()=>
              dataGridViewUsers.DataSource = action.getDataUsers();
@@ -90,8 +89,8 @@ namespace Medical_Analysis_Laboratory.Gui.GuiUsers
                 userName = dataGridViewUsers.CurrentRow.Cells[5].Value.ToString();
                 password = dataGridViewUsers.CurrentRow.Cells[6].Value.ToString();
                 typeUser = dataGridViewUsers.CurrentRow.Cells[7].Value.ToString();
-/*                BTN_Delete.Enabled = (Convert.ToBoolean(action.getDataIsCanDeleteUser(id).Rows[0][0].ToString()));
-*/
+                BTN_Delete.Enabled = (Convert.ToBoolean(action.getDataIsCanDeleteUser(id).Rows[0][0].ToString()));
+
             }
         }
         private string getTypeSearch()
@@ -171,7 +170,6 @@ namespace Medical_Analysis_Laboratory.Gui.GuiUsers
         {
             MessageShow.Show(formMain, Resources.SuccessExportData, BunifuSnackbar.MessageTypes.Success, 3000, "", BunifuSnackbar.Positions.TopRight);
         }
-
         #endregion
         #region Event
         private void BTN_Add_Click(object sender, EventArgs e)
@@ -220,13 +218,11 @@ namespace Medical_Analysis_Laboratory.Gui.GuiUsers
             {
                 using (ExcelPackage excelPackage = new ExcelPackage())
                 {
-                    // إنشاء ورقة Excel
                     ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("المستخدمين");
                     worksheet.Cells.Style.Font.Name = "Cairo";
-                    worksheet.View.RightToLeft = true; // تعيين اتجاه النص إلى اليمين
+                    worksheet.View.RightToLeft = true; 
                     worksheet.Cells.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
                   
-                    // تنسيق رأس الأعمدة
                     for (int col = 1; col <= dataGridViewUsers.Columns.Count; col++)
                     {
                         worksheet.Column(col).Width = 12.5;
@@ -235,19 +231,17 @@ namespace Medical_Analysis_Laboratory.Gui.GuiUsers
                         var cell = worksheet.Cells[1, col];
                  
                         cell.Value = dataGridViewUsers.Columns[col - 1].HeaderText;
-                        cell.Style.Font.Bold = true; // جعل الخط بولد
+                        cell.Style.Font.Bold = true;
                         cell.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-                        cell.Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#b40100")); // تغيير لون الخلفية
-                        cell.Style.Font.Color.SetColor(System.Drawing.Color.White); // تغيير لون الخط إلى أبيض
+                        cell.Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#b40100")); 
+                        cell.Style.Font.Color.SetColor(System.Drawing.Color.White); 
 
                     }
                     worksheet.Column(dataGridViewUsers.Columns.Count).Width = 23;
-                    // حلقة لنسخ البيانات من DataGridView إلى Excel
                     for (int row = 1; row <= dataGridViewUsers.Rows.Count; row++)
                     {
                         for (int col = 1; col <= dataGridViewUsers.Columns.Count; col++)
                         {
-                            // يجب أن تكون البيانات في صفحة DataGridView مُستنسخة في الصفحة الثانية للورقة Excel
                             worksheet.Cells[row + 1, col].Value = dataGridViewUsers.Rows[row - 1].Cells[col - 1].Value.ToString();
                         }
                     }
@@ -264,12 +258,10 @@ namespace Medical_Analysis_Laboratory.Gui.GuiUsers
                     worksheet.Cells["N3"].Style.Fill.BackgroundColor.SetColor(System.Drawing.ColorTranslator.FromHtml("#b40100"));
                     worksheet.Cells["N3"].Style.Font.Color.SetColor(System.Drawing.Color.White);
                     worksheet.Cells["N3"].Value = numberOfUsers;
-                    // تنسيق البيانات كجدول
                     var table = worksheet.Tables.Add(new ExcelAddressBase(1, 1, dataGridViewUsers.Rows.Count + 1, dataGridViewUsers.Columns.Count), "جدول_المستخدمين");
                     table.TableStyle = OfficeOpenXml.Table.TableStyles.Light1;
                     
 
-                    // حفظ الملف
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
                     saveFileDialog.Filter = "ملفات Excel (*.xlsx)|*.xlsx";
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)

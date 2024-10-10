@@ -18,6 +18,7 @@ namespace Medical_Analysis_Laboratory.Gui.GuiVisits
 {
     public partial class Visits_UserControl : UserControl
     {
+        #region VAR
         private Form formMain;
         private static Visits_UserControl visitControl;
         Cls_VisitsDB action=new Cls_VisitsDB();
@@ -26,17 +27,17 @@ namespace Medical_Analysis_Laboratory.Gui.GuiVisits
         private int id;
         private string namePatient;
         private string nameLaboratory;
-
         private string testCount;
         private string agePatient;
         private string genderPatient;
         private string visitData;
-
+        #endregion 
         public Visits_UserControl(Form formMain)
         {
             InitializeComponent();
             loadInitConfig(formMain);
         }
+        #region Function
         public static Visits_UserControl Instance(Form form)
         {
             //==> Freeing resources and not cloning more than once
@@ -189,7 +190,6 @@ namespace Medical_Analysis_Laboratory.Gui.GuiVisits
                 MessageBox.Show(ex.Message + "Code:LI:385-FG_User ", "خطأ");
             }
         }
-
         private void configCellSheet(ExcelWorksheet worksheet,string nameCell,string valCell,string bgColor)
         {
             worksheet.Cells[nameCell].Value = valCell;
@@ -200,7 +200,6 @@ namespace Medical_Analysis_Laboratory.Gui.GuiVisits
             
 
         }
-
         private void exportData(bool isAllVisits)
         {
             try
@@ -304,6 +303,8 @@ namespace Medical_Analysis_Laboratory.Gui.GuiVisits
                 loadFilterData();
             }
         }
+        #endregion
+        #region Event
         private void BTN_Add_Click(object sender, EventArgs e)
         {
             try
@@ -327,26 +328,16 @@ namespace Medical_Analysis_Laboratory.Gui.GuiVisits
                 MessageBox.Show(ex.Message);
             }
         }
-
-
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
                 deleteData();
         }
-
         private void dataGridViewVisits_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             getDataFromDGV();
         }
-
-        private void dataGridViewVisits_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void dataGridViewVisits_KeyDown(object sender, KeyEventArgs e)
         {
-         
                 if (e.KeyData == Keys.Delete)
                 {
                     if (BTN_Delete.Enabled)
@@ -354,19 +345,15 @@ namespace Medical_Analysis_Laboratory.Gui.GuiVisits
                         BTN_Delete.PerformClick();
                     }
                 }
-            
         }
-
         private void COMP_FilterData_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadFilterData();
         }
-
         private void COMP_FilterData_TextChanged(object sender, EventArgs e)
         {
             loadFilterData();
         }
-
         private void TX_Search_TextChanged(object sender, EventArgs e)
         {
             if (TX_Search.Text != "")
@@ -378,12 +365,10 @@ namespace Medical_Analysis_Laboratory.Gui.GuiVisits
                 loadFilterData();
             }
         }
-
         private void BTN_Export_Click(object sender, EventArgs e)
         {
             exportData(true);
         }
-
         private void BTN_View_Click(object sender, EventArgs e)
         {
             try
@@ -417,7 +402,6 @@ namespace Medical_Analysis_Laboratory.Gui.GuiVisits
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void BTN_ExportVisit_Click(object sender, EventArgs e)
         {
             if (id != 0)
@@ -430,5 +414,6 @@ namespace Medical_Analysis_Laboratory.Gui.GuiVisits
             }
          
         }
+        #endregion
     }
 }

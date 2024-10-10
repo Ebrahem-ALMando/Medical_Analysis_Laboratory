@@ -12,8 +12,6 @@ namespace Medical_Analysis_Laboratory.Classes
 {
     public static class ClsMessageCollections
     {
-      
-
         public static readonly Guna2MessageDialog messageShow = new Guna2MessageDialog();
         public static  BunifuSnackbar messageShowBUF;
         //==>Show Message Empty Data
@@ -48,26 +46,12 @@ namespace Medical_Analysis_Laboratory.Classes
             messageShow.Show(Resources.EmptyData + "\n ", Resources.CaptionWarningData);
         }
 
-        public static void showCheckGetExamMessageData()
-        {
-            getWarningMessageFormat();
-            messageShow.Show(Resources.EmptyDataExam + "\n ", Resources.CaptionWarningData);
-        }
         public static void showWarningInputvalidPasswordMessageData()
         {
             getWarningMessageFormat();
             messageShow.Show(Resources.WarningInputvalidPassword + "\n ", Resources.CaptionWarningData);
         }
-        public static void showWarningOverFlowCountMessageData()
-        {
-            getWarningMessageFormat();
-            messageShow.Show(Resources.WarningOverFlowCount + "\n ", Resources.CaptionWarningData);
-        }
-        public static void showWarningThisExamHasBeenProvidedPreviouslytMessageData()
-        {
-            getWarningMessageFormat();
-            messageShow.Show(Resources.WarningisSubmittedExam + "\n ", Resources.CaptionWarningData);
-        }
+
         //==>Show Message Empty Data Serach
         public static void showEmptySearchMessageData()
         {
@@ -119,36 +103,6 @@ namespace Medical_Analysis_Laboratory.Classes
             DialogResult check = messageShow.Show(Resources.QuitionEndExam + "\n ", Resources.CaptionQuitionEndExam);
             return check;
         }
-        //==>Show Message Quition Add Data
-        /*    public static DialogResult showQuitionDepositMessageData()
-            {
-                getQuitionMessageFormat();
-                DialogResult check = messageShow.Show(Resources.QuitionDepositData + "\n ", Resources.CaptionQuitionDepositData);
-                return check;
-            }
-            public static DialogResult showQuitionWithdrawalMessageData()
-            {
-                getQuitionMessageFormat();
-                DialogResult check = messageShow.Show(Resources.QuitionWithdrawalData + "\n ", Resources.CaptionQuitionwithdrawalData);
-                return check;
-            }*/
-        /*   public static void showSuccessWithdrawalMessageData()
-           {
-               getSuccessMessageFormat();
-
-               messageShow.Show(Resources.SuccessWithdrawalData + "\n ", Resources.CaptionSuccessActionData);
-           }
-           public static void showSuccessDepositMessageData()
-           {
-               getSuccessMessageFormat();
-
-               messageShow.Show(Resources.SuccessDepositData + "\n ", Resources.CaptionSuccessActionData);
-           }
-           public static void showWarningNotEnoughAmountMessageData()
-           {
-               getWarningMessageFormat();
-               messageShow.Show(Resources.WarningNotEnoughAmount + "\n ", Resources.CaptionWarningData);
-           }*/
 
         //==>Show Message Quition Add Data
         public static void showWarningInputJustNumberMessageData()
@@ -224,11 +178,7 @@ namespace Medical_Analysis_Laboratory.Classes
             DialogResult check = messageShow.Show(Resources.WarningClrearVisitTests + "\n ", Resources.CaptionWarningData);
             return check;
         }
-        public static void showSuccessSubmiteExamMessageData()
-        {
-            getSuccessMessageFormat();
-            messageShow.Show(Resources.SuccessSubmiteExam + "\n ", Resources.CaptionSuccessActionData);
-        }
+  
         //-------------------------------New
 
         public static void showWarningInputvalueGreaterthan20MessageData()
@@ -236,14 +186,6 @@ namespace Medical_Analysis_Laboratory.Classes
             getWarningMessageFormat();
             messageShow.Show(Resources.WarningInputValueInRange + "\n ", Resources.CaptionWarningData);
         }
-
-
-        public static void showSuccessUpdateTimeMessageData()
-        {
-            getSuccessMessageFormat();
-            messageShow.Show(Resources.SuccessUpdateTime + "\n ", Resources.CaptionSuccessActionData);
-        }
-
 
         //==>Show Message Warning Select Panen tNode
         public static void showWarningSelectPanentNodeMessageData()
@@ -277,19 +219,6 @@ namespace Medical_Analysis_Laboratory.Classes
             }
 
         }
-      /*  public static void checkInputTextBoxNumber(TextBox textBox)
-        {
-            if (textBox.Text != "")
-            {
-                float textValue = Convert.ToSingle(textBox.Text);
-                if (textValue > 100)
-                {
-                   *//* showWarningInputvalueGreaterthan100MessageData();*//*
-                    textBox.Clear();
-                }
-            }
-
-        }*/
         public static void showEmptySelectedMessageData()
         {
             getWarningMessageFormat();
